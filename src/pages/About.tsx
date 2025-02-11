@@ -3,6 +3,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Footer } from "@/components/Footer";
 import { Home, Info, Phone, ScrollText } from "lucide-react";
 import { Building2, Users, Globe } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const navItems = [
   {
@@ -64,6 +65,43 @@ const About = () => {
                 We're dedicated to empowering businesses with cutting-edge solutions that drive growth and innovation. 
                 Our mission is to transform challenges into opportunities and help our clients achieve extraordinary results.
               </p>
+            </div>
+
+            <div className="py-16 bg-black text-white rounded-2xl px-8">
+              <h2 className="text-4xl font-bold mb-6 text-blue-500">Meet Our Founders</h2>
+              <p className="text-lg mb-12 max-w-3xl">
+                Our team of skilled professionals is dedicated to delivering excellence in every project. 
+                With expertise in digital marketing, content creation, design, development, and business solutions, 
+                we ensure your success is our top priority.
+              </p>
+
+              <div className="space-y-12">
+                <div className="flex items-start gap-6">
+                  <Avatar className="w-16 h-16">
+                    <AvatarFallback>DM</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">Deepam Modi</h3>
+                    <p className="text-gray-300">
+                      Jane is our creative content expert, crafting engaging and compelling content that resonates 
+                      with your audience and drives results for your business.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <Avatar className="w-16 h-16">
+                    <AvatarFallback>AC</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">Abhishek Chavan</h3>
+                    <p className="text-gray-300">
+                      Emily is our web development wizard, bringing your ideas to life with functional and visually stunning 
+                      websites that captivate your visitors.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
