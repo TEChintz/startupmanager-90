@@ -1,6 +1,8 @@
+
 import { Monitor, Rocket, BarChart3, Users, Globe, Code, Palette, Building2, Film, Share2, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 import {
   Dialog,
   DialogContent,
@@ -376,6 +378,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };
