@@ -1,4 +1,3 @@
-
 import { Monitor, Rocket, BarChart3, Users, Globe, Code, Palette, Building2, Film, Share2, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -10,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const serviceCategories = [
   {
@@ -236,6 +236,10 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-4xl max-h-[90vh] p-0 gap-0 overflow-hidden rounded-2xl">
+        <DialogHeader className="sr-only">
+          <DialogTitle>{category.title}</DialogTitle>
+          <DialogDescription>{category.description}</DialogDescription>
+        </DialogHeader>
         <div className="flex h-full">
           {/* Left sidebar with service list */}
           <div className="w-72 border-r border-gray-100 p-6 bg-gray-50/50">
@@ -257,54 +261,56 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
           </div>
           
           {/* Main content area with scrollable services */}
-          <div className="flex-1 overflow-y-auto">
-            <div className="p-6 space-y-6">
-              {category.services.map((service, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl border border-gray-100 overflow-hidden"
-                >
-                  <div className="p-6">
-                    <div className="flex items-start justify-between gap-4 mb-6">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900">
-                          {service.name}
-                        </h3>
-                        <p className="mt-2 text-gray-600">
-                          {service.description}
-                        </p>
+          <div className="flex-1">
+            <ScrollArea className="h-[80vh]">
+              <div className="p-6 space-y-6">
+                {category.services.map((service, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-xl border border-gray-100 overflow-hidden"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-start justify-between gap-4 mb-6">
+                        <div>
+                          <h3 className="text-xl font-semibold text-gray-900">
+                            {service.name}
+                          </h3>
+                          <p className="mt-2 text-gray-600">
+                            {service.description}
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full">
+                          <Package className="h-4 w-4 text-purple-600" />
+                          <span className="text-sm font-semibold text-purple-600">
+                            {service.price}
+                          </span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full">
-                        <Package className="h-4 w-4 text-purple-600" />
-                        <span className="text-sm font-semibold text-purple-600">
-                          {service.price}
-                        </span>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-medium text-gray-900">Features & Benefits</h4>
+                        <div className="grid gap-3">
+                          {service.features.map((feature, featureIdx) => (
+                            <div
+                              key={featureIdx}
+                              className="flex items-center gap-3 text-gray-600"
+                            >
+                              <div className="h-1.5 w-1.5 rounded-full bg-purple-400" />
+                              <span className="text-sm">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    
-                    <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900">Features & Benefits</h4>
-                      <div className="grid gap-3">
-                        {service.features.map((feature, featureIdx) => (
-                          <div
-                            key={featureIdx}
-                            className="flex items-center gap-3 text-gray-600"
-                          >
-                            <div className="h-1.5 w-1.5 rounded-full bg-purple-400" />
-                            <span className="text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="px-6 py-4 bg-gray-50 flex justify-end">
+                      <Button className="rounded-lg">
+                        Get Started
+                      </Button>
                     </div>
                   </div>
-                  <div className="px-6 py-4 bg-gray-50 flex justify-end">
-                    <Button className="rounded-lg">
-                      Get Started
-                    </Button>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </ScrollArea>
           </div>
         </div>
       </DialogContent>
