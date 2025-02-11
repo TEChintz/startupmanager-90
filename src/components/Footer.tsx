@@ -10,7 +10,7 @@ export const Footer = () => {
         className="absolute inset-0 !h-full"
         showRadialGradient={false}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-800/70 to-purple-950/80" />
       </AuroraBackground>
       
       <div className="relative">
