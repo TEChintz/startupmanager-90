@@ -1,13 +1,17 @@
+
 import { Github, Mail, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
+import { AuroraBackground } from "./ui/aurora-background";
 
 export const Footer = () => {
   return (
-    <footer className="w-full relative py-12 overflow-hidden">
-      {/* Background with single color dark gradient */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 to-black opacity-90" />
-      </div>
+    <footer className="w-full relative py-12">
+      <AuroraBackground
+        className="absolute inset-0 !h-full"
+        showRadialGradient={false}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-black/95" />
+      </AuroraBackground>
       
       <div className="relative">
         <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
