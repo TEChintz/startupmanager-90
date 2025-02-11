@@ -38,9 +38,6 @@ export const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-12"
         >
-          <span className="px-3 py-1 text-sm font-medium bg-purple-50 text-purple-600 rounded-full">
-            Contact Us
-          </span>
           <h2 className="text-3xl md:text-4xl font-bold">
             Get In <span className="font-serif italic">Touch</span>
           </h2>
@@ -57,15 +54,31 @@ export const ContactSection = () => {
           className="space-y-6"
         >
           <div className="grid md:grid-cols-2 gap-6">
-            <Input name="name" required placeholder="Name" className="rounded-lg" />
-            <Input name="email" type="email" required placeholder="Email" className="rounded-lg" />
+            <Input 
+              name="name" 
+              required 
+              placeholder="Name" 
+              className="rounded-lg font-serif" 
+            />
+            <Input 
+              name="email" 
+              type="email" 
+              required 
+              placeholder="Email" 
+              className="rounded-lg font-serif" 
+            />
           </div>
-          <Input name="subject" required placeholder="Subject" className="rounded-lg" />
+          <Input 
+            name="subject" 
+            required 
+            placeholder="Subject" 
+            className="rounded-lg font-serif" 
+          />
           <Textarea
             name="message"
             required
             placeholder="Your message"
-            className="min-h-[150px] rounded-lg"
+            className="min-h-[150px] rounded-lg font-serif"
           />
           <Button 
             type="submit" 
