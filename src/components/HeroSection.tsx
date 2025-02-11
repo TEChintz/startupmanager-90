@@ -1,10 +1,11 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { AuroraBackground } from "./ui/aurora-background";
 
 export const HeroSection = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-20">
+    <AuroraBackground>
       <div className="space-y-8 text-center max-w-4xl mx-auto">
         <span className="px-3 py-1 text-sm font-medium bg-black/5 rounded-full">
           Launching something special? We're here to help
@@ -25,6 +26,6 @@ export const HeroSection = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   );
 };
