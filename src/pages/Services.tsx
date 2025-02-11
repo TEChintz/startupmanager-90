@@ -235,32 +235,45 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
           </ul>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-3xl">
         <DialogHeader>
-          <DialogTitle className="text-2xl">{category.title}</DialogTitle>
-          <DialogDescription className="text-base">
+          <div className={`${category.color} w-14 h-14 rounded-2xl flex items-center justify-center mb-4`}>
+            <div className={category.textColor}>{category.icon}</div>
+          </div>
+          <DialogTitle className="text-3xl font-bold mb-2">{category.title}</DialogTitle>
+          <DialogDescription className="text-lg">
             {category.description}
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-6 py-4">
+        <div className="grid gap-6 mt-6">
           {category.services.map((service, idx) => (
-            <div key={idx} className="space-y-4">
-              <h3 className="text-xl font-semibold">{service.name}</h3>
-              <p className="text-gray-600">{service.description}</p>
-              <div className="flex items-center gap-2 text-lg font-semibold text-purple-600">
-                <Package className="h-5 w-5" />
-                {service.price}
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-medium mb-2">Key Features:</h4>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 bg-blue-500 rounded-full" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div 
+              key={idx} 
+              className="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-b from-white to-gray-50/50 p-6 shadow-sm transition-all hover:shadow-md"
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>
+                    <p className="mt-2 text-gray-600">{service.description}</p>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full bg-purple-50 px-4 py-1.5 text-sm font-semibold text-purple-600">
+                    <Package className="h-4 w-4" />
+                    {service.price}
+                  </div>
+                </div>
+                
+                <div className="rounded-lg bg-gray-50/50 p-4">
+                  <h4 className="font-medium text-gray-900 mb-3">Key Features</h4>
+                  <div className="grid gap-2">
+                    {service.features.map((feature, featureIdx) => (
+                      <div key={featureIdx} className="flex items-center gap-2 text-gray-600">
+                        <div className="h-1.5 w-1.5 rounded-full bg-purple-400" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
