@@ -22,6 +22,7 @@ const serviceCategories = [
       {
         name: "Meta Ads - Social Media Advertising",
         description: "Strategic advertising campaigns across Facebook, Instagram, and other Meta platforms to reach your target audience effectively.",
+        price: "Starting from $499/month",
         features: [
           "Campaign Strategy Development",
           "Audience Targeting",
@@ -33,6 +34,7 @@ const serviceCategories = [
       {
         name: "Google Ads - Search & Display",
         description: "Results-driven Google advertising campaigns to increase visibility and drive conversions.",
+        price: "Starting from $599/month",
         features: [
           "Keyword Research",
           "Ad Copy Creation",
@@ -44,6 +46,7 @@ const serviceCategories = [
       {
         name: "SEO - Search Engine Optimization",
         description: "Comprehensive SEO services to improve your website's search engine rankings.",
+        price: "Starting from $799/month",
         features: [
           "On-page Optimization",
           "Technical SEO Audit",
@@ -64,6 +67,7 @@ const serviceCategories = [
       {
         name: "Wix/Shopify Development",
         description: "Professional development services for Wix and Shopify platforms.",
+        price: "Starting from $999",
         features: [
           "Custom Theme Development",
           "E-commerce Setup",
@@ -75,6 +79,7 @@ const serviceCategories = [
       {
         name: "Full Stack Custom Site",
         description: "End-to-end custom website development tailored to your requirements.",
+        price: "Starting from $2,499",
         features: [
           "Custom Design",
           "Frontend Development",
@@ -86,6 +91,7 @@ const serviceCategories = [
       {
         name: "UI/UX Design",
         description: "User-centered design services to create engaging digital experiences.",
+        price: "Starting from $799",
         features: [
           "User Research",
           "Wireframing",
@@ -106,6 +112,7 @@ const serviceCategories = [
       {
         name: "Company Registration",
         description: "Complete assistance with company registration and documentation.",
+        price: "Starting from $399",
         features: [
           "Business Structure Planning",
           "Documentation Preparation",
@@ -117,6 +124,7 @@ const serviceCategories = [
       {
         name: "Yearly Compliances",
         description: "Comprehensive compliance management services.",
+        price: "$299/year",
         features: [
           "Annual Returns Filing",
           "Statutory Compliance",
@@ -128,6 +136,7 @@ const serviceCategories = [
       {
         name: "Auditing Services",
         description: "Thorough auditing services for business transparency.",
+        price: "Starting from $899",
         features: [
           "Financial Audits",
           "Internal Controls Review",
@@ -148,6 +157,7 @@ const serviceCategories = [
       {
         name: "Content Creation",
         description: "High-quality content creation services for various platforms.",
+        price: "Starting from $299/month",
         features: [
           "Blog Writing",
           "Social Media Content",
@@ -159,6 +169,7 @@ const serviceCategories = [
       {
         name: "Professional Video Editing",
         description: "Expert video editing services for engaging content.",
+        price: "Starting from $199/video",
         features: [
           "Video Editing",
           "Motion Graphics",
@@ -170,6 +181,7 @@ const serviceCategories = [
       {
         name: "Social Media Management",
         description: "Comprehensive social media management services.",
+        price: "Starting from $499/month",
         features: [
           "Content Calendar",
           "Post Scheduling",
@@ -235,6 +247,10 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
             <div key={idx} className="space-y-4">
               <h3 className="text-xl font-semibold">{service.name}</h3>
               <p className="text-gray-600">{service.description}</p>
+              <div className="flex items-center gap-2 text-lg font-semibold text-purple-600">
+                <Package className="h-5 w-5" />
+                {service.price}
+              </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-medium mb-2">Key Features:</h4>
                 <ul className="space-y-2">
