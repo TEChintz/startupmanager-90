@@ -1,28 +1,28 @@
 
-import { Monitor, Rocket, BarChart3, Users, ArrowRight } from "lucide-react";
+import { Globe, Code, Building2, Film, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: <Monitor className="h-6 w-6" />,
-    title: "Product Strategy",
-    description: "Define your product roadmap and go-to-market strategy",
+    icon: <Globe className="h-6 w-6" />,
+    title: "Digital Marketing",
+    description: "Comprehensive digital marketing solutions to boost your online presence",
   },
   {
-    icon: <Rocket className="h-6 w-6" />,
-    title: "Launch Support",
-    description: "End-to-end launch planning and execution support",
+    icon: <Code className="h-6 w-6" />,
+    title: "Web Development",
+    description: "Custom web development solutions for your business needs",
   },
   {
-    icon: <BarChart3 className="h-6 w-6" />,
-    title: "Growth Optimization",
-    description: "Data-driven growth strategies and optimization",
+    icon: <Building2 className="h-6 w-6" />,
+    title: "Company Registration",
+    description: "Professional business registration and auditing services",
   },
   {
-    icon: <Users className="h-6 w-6" />,
-    title: "Team Building",
-    description: "Build and scale high-performing teams",
+    icon: <Film className="h-6 w-6" />,
+    title: "Content Creation",
+    description: "Creative content solutions for your brand",
   },
 ];
 
