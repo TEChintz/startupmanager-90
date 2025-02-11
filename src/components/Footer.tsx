@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="w-full bg-zinc-50 dark:bg-zinc-900 py-12 border-t">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
         <div className="space-y-3">
-          <h4 className="text-xl font-bold">Company</h4>
+          <h4 className="text-xl font-bold">StartUP Manager</h4>
           <nav className="flex flex-col space-y-3">
             <a href="/about" className="text-muted-foreground hover:text-primary">About Us</a>
             <a href="/services" className="text-muted-foreground hover:text-primary">Services</a>
@@ -47,7 +47,7 @@ export const Footer = () => {
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
-            Contact us at: hello@company.com
+            Contact us at: hello@startupmanager.com
           </p>
         </div>
       </div>
@@ -55,10 +55,10 @@ export const Footer = () => {
       <div className="container mt-8 border-t pt-8 px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Company. All rights reserved.
+            © 2024 StartUP Manager. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground mt-4 md:mt-0">
-            Made with ❤️ by Company Team
+            Made with ❤️ by StartUP Manager Team
           </p>
         </div>
       </div>
