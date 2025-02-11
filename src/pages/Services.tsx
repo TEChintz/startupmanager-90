@@ -257,7 +257,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
             </div>
           </div>
           
-          <ScrollArea className="flex-1 h-full">
+          <ScrollArea className="flex-1">
             <div className="p-6 space-y-6">
               {category.services.map((service, idx) => (
                 <div
@@ -298,8 +298,8 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
                     </div>
                   </div>
                   <div className="px-6 py-4 bg-gray-50 flex justify-end">
-                    <Button className="rounded-lg">
-                      Get Started
+                    <Button asChild className="rounded-lg">
+                      <Link to="/contact">Get Started</Link>
                     </Button>
                   </div>
                 </div>
