@@ -1,14 +1,12 @@
-
 import { Github, Mail, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Footer = () => {
   return (
     <footer className="w-full relative py-12 overflow-hidden">
-      {/* Background with gradient effect similar to About section */}
+      {/* Background with single color dark gradient */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 to-black opacity-90" />
-        <div className="absolute inset-0 bg-[linear-gradient(60deg,#abecd6_0%,#fbed96_100%)] opacity-20" />
       </div>
       
       <div className="relative">
