@@ -1,5 +1,6 @@
 
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -26,13 +27,23 @@ export const TestimonialsSection = () => {
   return (
     <div className="py-20 bg-black/5">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-geist font-bold mb-16 text-center">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-4xl font-geist font-bold mb-16 text-center"
+        >
           Trusted by <span className="font-serif italic">Innovators</span>
-        </h2>
+        </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white p-6 rounded-xl border border-gray-200"
             >
               <div className="flex gap-1 mb-4">
@@ -45,7 +56,7 @@ export const TestimonialsSection = () => {
                 <p className="font-geist font-semibold">{testimonial.name}</p>
                 <p className="text-sm text-gray-500">{testimonial.role}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

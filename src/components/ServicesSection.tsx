@@ -2,6 +2,7 @@
 import { Globe, Code, Building2, Film, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -30,7 +31,13 @@ export const ServicesSection = () => {
   return (
     <div className="py-20 overflow-hidden">
       <div className="container">
-        <div className="flex justify-between items-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-between items-center mb-16"
+        >
           <h2 className="text-3xl md:text-4xl font-geist font-bold">
             Our <span className="font-serif italic">Services</span>
           </h2>
@@ -39,11 +46,15 @@ export const ServicesSection = () => {
               See All Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </motion.div>
         <div className="flex gap-6 animate-scroll">
           {services.concat(services).map((service, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex-none w-[300px] p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="h-12 w-12 bg-black/5 rounded-full flex items-center justify-center mb-4">
@@ -51,7 +62,7 @@ export const ServicesSection = () => {
               </div>
               <h3 className="text-xl font-geist font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

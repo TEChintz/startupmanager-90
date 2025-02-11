@@ -4,6 +4,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "./ui/use-toast";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -30,7 +31,13 @@ export const ContactSection = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-purple-50 to-white">
       <div className="container max-w-4xl">
-        <div className="text-center space-y-4 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center space-y-4 mb-12"
+        >
           <span className="px-3 py-1 text-sm font-medium bg-purple-50 text-purple-600 rounded-full">
             Contact Us
           </span>
@@ -40,8 +47,15 @@ export const ContactSection = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
-        </div>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        </motion.div>
+        <motion.form 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          onSubmit={handleSubmit} 
+          className="space-y-6"
+        >
           <div className="grid md:grid-cols-2 gap-6">
             <Input name="name" required placeholder="Name" className="rounded-lg" />
             <Input name="email" type="email" required placeholder="Email" className="rounded-lg" />
@@ -61,7 +75,7 @@ export const ContactSection = () => {
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
-        </form>
+        </motion.form>
       </div>
     </div>
   );
