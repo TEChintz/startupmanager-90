@@ -1,5 +1,7 @@
 
-import { Monitor, Rocket, BarChart3, Users } from "lucide-react";
+import { Monitor, Rocket, BarChart3, Users, ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -28,9 +30,16 @@ export const ServicesSection = () => {
   return (
     <div className="py-20 overflow-hidden">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-geist font-bold mb-16 text-center">
-          Our <span className="font-serif italic">Services</span>
-        </h2>
+        <div className="flex justify-between items-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-geist font-bold">
+            Our <span className="font-serif italic">Services</span>
+          </h2>
+          <Button asChild variant="outline" className="rounded-lg">
+            <Link to="/services">
+              See All Services <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
         <div className="flex gap-6 animate-scroll">
           {services.concat(services).map((service, index) => (
             <div
