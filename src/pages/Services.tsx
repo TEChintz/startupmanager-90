@@ -257,8 +257,8 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
           </div>
           
           {/* Main content area with scrollable services */}
-          <div className="flex-1 overflow-y-auto p-6">
-            <div className="space-y-6">
+          <div className="flex-1 overflow-y-auto">
+            <div className="p-6 space-y-6">
               {category.services.map((service, idx) => (
                 <div
                   key={idx}
