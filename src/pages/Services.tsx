@@ -2,6 +2,14 @@
 import { Monitor, Rocket, BarChart3, Users, Globe, Code, Palette, Building2, Film, Share2, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const serviceCategories = [
   {
@@ -9,10 +17,41 @@ const serviceCategories = [
     icon: <Globe className="h-8 w-8" />,
     color: "bg-red-100",
     textColor: "text-red-600",
+    description: "Comprehensive digital marketing solutions to boost your online presence",
     services: [
-      "Meta Ads - Social Media Advertising",
-      "Google Ads - Search & Display",
-      "SEO - Search Engine Optimization"
+      {
+        name: "Meta Ads - Social Media Advertising",
+        description: "Strategic advertising campaigns across Facebook, Instagram, and other Meta platforms to reach your target audience effectively.",
+        features: [
+          "Campaign Strategy Development",
+          "Audience Targeting",
+          "Ad Creative Design",
+          "Performance Monitoring",
+          "ROI Optimization"
+        ]
+      },
+      {
+        name: "Google Ads - Search & Display",
+        description: "Results-driven Google advertising campaigns to increase visibility and drive conversions.",
+        features: [
+          "Keyword Research",
+          "Ad Copy Creation",
+          "Display Network Campaigns",
+          "Conversion Tracking",
+          "Budget Management"
+        ]
+      },
+      {
+        name: "SEO - Search Engine Optimization",
+        description: "Comprehensive SEO services to improve your website's search engine rankings.",
+        features: [
+          "On-page Optimization",
+          "Technical SEO Audit",
+          "Content Strategy",
+          "Link Building",
+          "Performance Analytics"
+        ]
+      }
     ]
   },
   {
@@ -20,10 +59,41 @@ const serviceCategories = [
     icon: <Code className="h-8 w-8" />,
     color: "bg-blue-100",
     textColor: "text-blue-600",
+    description: "Custom web development solutions for your business needs",
     services: [
-      "Wix/Shopify Development",
-      "Full Stack Custom Site",
-      "UI/UX Design"
+      {
+        name: "Wix/Shopify Development",
+        description: "Professional development services for Wix and Shopify platforms.",
+        features: [
+          "Custom Theme Development",
+          "E-commerce Setup",
+          "Payment Integration",
+          "Mobile Optimization",
+          "Performance Tuning"
+        ]
+      },
+      {
+        name: "Full Stack Custom Site",
+        description: "End-to-end custom website development tailored to your requirements.",
+        features: [
+          "Custom Design",
+          "Frontend Development",
+          "Backend Integration",
+          "Database Setup",
+          "API Development"
+        ]
+      },
+      {
+        name: "UI/UX Design",
+        description: "User-centered design services to create engaging digital experiences.",
+        features: [
+          "User Research",
+          "Wireframing",
+          "Prototyping",
+          "Visual Design",
+          "Usability Testing"
+        ]
+      }
     ]
   },
   {
@@ -31,10 +101,41 @@ const serviceCategories = [
     icon: <Building2 className="h-8 w-8" />,
     color: "bg-purple-100",
     textColor: "text-purple-600",
+    description: "Professional business registration and auditing services",
     services: [
-      "Company Registration",
-      "Yearly Compliances",
-      "Auditing Services"
+      {
+        name: "Company Registration",
+        description: "Complete assistance with company registration and documentation.",
+        features: [
+          "Business Structure Planning",
+          "Documentation Preparation",
+          "Legal Compliance",
+          "Registration Process",
+          "Post-registration Support"
+        ]
+      },
+      {
+        name: "Yearly Compliances",
+        description: "Comprehensive compliance management services.",
+        features: [
+          "Annual Returns Filing",
+          "Statutory Compliance",
+          "Tax Compliance",
+          "Regulatory Updates",
+          "Documentation Management"
+        ]
+      },
+      {
+        name: "Auditing Services",
+        description: "Thorough auditing services for business transparency.",
+        features: [
+          "Financial Audits",
+          "Internal Controls Review",
+          "Risk Assessment",
+          "Compliance Audits",
+          "Report Generation"
+        ]
+      }
     ]
   },
   {
@@ -42,10 +143,41 @@ const serviceCategories = [
     icon: <Film className="h-8 w-8" />,
     color: "bg-green-100",
     textColor: "text-green-600",
+    description: "Creative content solutions for your brand",
     services: [
-      "Content Creation",
-      "Professional Video Editing",
-      "Social Media Management"
+      {
+        name: "Content Creation",
+        description: "High-quality content creation services for various platforms.",
+        features: [
+          "Blog Writing",
+          "Social Media Content",
+          "Copywriting",
+          "Email Marketing Content",
+          "Brand Storytelling"
+        ]
+      },
+      {
+        name: "Professional Video Editing",
+        description: "Expert video editing services for engaging content.",
+        features: [
+          "Video Editing",
+          "Motion Graphics",
+          "Color Grading",
+          "Sound Design",
+          "Format Optimization"
+        ]
+      },
+      {
+        name: "Social Media Management",
+        description: "Comprehensive social media management services.",
+        features: [
+          "Content Calendar",
+          "Post Scheduling",
+          "Community Management",
+          "Analytics Reporting",
+          "Engagement Strategy"
+        ]
+      }
     ]
   }
 ];
@@ -71,10 +203,60 @@ const comboPacks = [
   }
 ];
 
+const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) => {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <div className="p-8 rounded-xl border border-gray-200 hover:border-gray-300 transition-all group cursor-pointer">
+          <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+            <div className={category.textColor}>{category.icon}</div>
+          </div>
+          <h2 className="text-2xl font-semibold mb-4">{category.title}</h2>
+          <p className="text-gray-600 mb-4">{category.description}</p>
+          <ul className="space-y-3">
+            {category.services.map((service, idx) => (
+              <li key={idx} className="flex items-center gap-3">
+                <div className="h-1.5 w-1.5 bg-gray-400 rounded-full" />
+                <span className="text-gray-600">{service.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </DialogTrigger>
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl">{category.title}</DialogTitle>
+          <DialogDescription className="text-base">
+            {category.description}
+          </DialogDescription>
+        </DialogHeader>
+        <div className="space-y-6 py-4">
+          {category.services.map((service, idx) => (
+            <div key={idx} className="space-y-4">
+              <h3 className="text-xl font-semibold">{service.name}</h3>
+              <p className="text-gray-600">{service.description}</p>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-medium mb-2">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIdx) => (
+                    <li key={featureIdx} className="flex items-center gap-2">
+                      <div className="h-1.5 w-1.5 bg-blue-500 rounded-full" />
+                      <span className="text-gray-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 const Services = () => {
   return (
     <main className="min-h-screen bg-white font-geist">
-      {/* Header */}
       <div className="container py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -86,31 +268,13 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Service Categories */}
       <div className="container pb-20">
         <div className="grid md:grid-cols-2 gap-8">
           {serviceCategories.map((category, index) => (
-            <div
-              key={index}
-              className="p-8 rounded-xl border border-gray-200 hover:border-gray-300 transition-all group"
-            >
-              <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <div className={category.textColor}>{category.icon}</div>
-              </div>
-              <h2 className="text-2xl font-semibold mb-4">{category.title}</h2>
-              <ul className="space-y-3">
-                {category.services.map((service, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 bg-gray-400 rounded-full" />
-                    <span className="text-gray-600">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ServiceCard key={index} category={category} />
           ))}
         </div>
 
-        {/* Combo Packs */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center mb-12">
             All Services <span className="font-serif italic">Combo Packs</span>
@@ -140,7 +304,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-6">
             Ready to transform your startup?
@@ -160,3 +323,4 @@ const Services = () => {
 };
 
 export default Services;
+
