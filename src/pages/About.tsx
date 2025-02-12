@@ -85,6 +85,19 @@ const About = () => {
                     </p>
                   </div>
                 </div>
+
+                <div className="flex items-start gap-8">
+                  <Avatar className="w-20 h-20 ring-4 ring-purple-400/20">
+                    <AvatarFallback className="bg-purple-800 text-purple-200">RK</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2 text-purple-200">Rohit Kumar</h3>
+                    <p className="text-purple-200/80 text-lg leading-relaxed">
+                      Business Development Manager specializing in market analysis and strategic partnerships,
+                      driving growth through innovative business solutions and client relationships.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
