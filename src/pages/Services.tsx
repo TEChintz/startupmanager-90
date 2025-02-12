@@ -2,8 +2,7 @@ import { Monitor, Rocket, BarChart3, Users, Globe, Code, Palette, Building2, Fil
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import { Home, Info, Phone, ScrollText } from "lucide-react";
+import { Header } from "@/components/Header";
 import {
   Dialog,
   DialogContent,
@@ -341,9 +340,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
 const Services = () => {
   return (
     <main className="min-h-screen bg-black text-white font-geist">
-      <div className="fixed top-0 left-0 right-0 z-50">
-        <FloatingNav navItems={navItems} />
-      </div>
+      <Header />
       <div className="container py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

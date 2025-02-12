@@ -1,39 +1,13 @@
-import { FloatingNav } from "@/components/ui/floating-navbar";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Home, Info, Phone, ScrollText } from "lucide-react";
 import { Building2, Users, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
-const navItems = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <Home className="h-4 w-4" />,
-  },
-  {
-    name: "Services",
-    link: "/services",
-    icon: <ScrollText className="h-4 w-4" />,
-  },
-  {
-    name: "About",
-    link: "/about",
-    icon: <Info className="h-4 w-4" />,
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-    icon: <Phone className="h-4 w-4" />,
-  },
-];
 
 const About = () => {
   return (
     <main className="min-h-screen bg-black text-white font-geist">
-      <div className="fixed top-0 left-0 right-0 z-50">
-        <FloatingNav navItems={navItems} />
-      </div>
-      <div className="container pt-20">
+      <Header />
+      <div className="container pt-16">
         <div className="max-w-4xl mx-auto py-20">
           <div className="text-center space-y-4">
             <span className="px-3 py-1 text-sm font-medium bg-purple-50 text-purple-600 rounded-full">
