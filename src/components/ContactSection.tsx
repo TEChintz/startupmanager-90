@@ -38,7 +38,7 @@ export const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Get In <span className="font-serif italic">Touch</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -84,7 +84,7 @@ export const ContactSection = () => {
             type="submit" 
             size="lg" 
             disabled={isSubmitting} 
-            className="w-full rounded-lg bg-purple-600 hover:bg-purple-700"
+            className="w-full rounded-lg bg-white text-black hover:bg-white/90"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
