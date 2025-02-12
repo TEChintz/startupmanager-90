@@ -368,19 +368,19 @@ const Services = () => {
             {comboPacks.map((pack, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all hover:shadow-lg"
+                className="p-6 rounded-xl border border-white/10 bg-[#222222] hover:border-white/20 transition-all hover:shadow-lg"
               >
-                <div className="h-12 w-12 bg-black/5 rounded-full flex items-center justify-center mb-4">
-                  <Package className="h-6 w-6" />
+                <div className="h-12 w-12 bg-white/5 rounded-full flex items-center justify-center mb-4">
+                  <Package className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{pack.title}</h3>
-                <p className="text-gray-600 mb-4">{pack.description}</p>
-                <div className="text-2xl font-bold mb-4">{pack.price}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{pack.title}</h3>
+                <p className="text-gray-400 mb-4">{pack.description}</p>
+                <div className="text-2xl font-bold mb-4 text-white">{pack.price}</div>
                 <ul className="space-y-3">
                   {pack.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 bg-black rounded-full" />
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <div className="h-1.5 w-1.5 bg-gray-500 rounded-full" />
+                      <span className="text-sm text-gray-400">{feature}</span>
                     </li>
                   ))}
                 </ul>
