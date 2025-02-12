@@ -42,7 +42,7 @@ export const ServicesSection = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-between items-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-geist font-bold">
+          <h2 className="text-3xl md:text-4xl font-geist font-bold text-[#375CE1]">
             Our <span className="font-serif italic">Services</span>
           </h2>
           <Button asChild variant="outline" className="rounded-lg bg-white text-black hover:bg-white/90">
@@ -64,7 +64,7 @@ export const ServicesSection = () => {
               <div className={`h-12 w-12 ${service.color} rounded-full flex items-center justify-center mb-4`}>
                 {service.icon}
               </div>
-              <h3 className="text-xl font-geist font-semibold mb-2 text-white">{service.title}</h3>
+              <h3 className="text-xl font-geist font-semibold mb-2 text-[#375CE1]">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}

@@ -21,7 +21,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-geist font-bold tracking-tight"
+          className="text-5xl md:text-7xl font-geist font-bold tracking-tight text-[#375CE1]"
         >
           Your Vision,{" "}
           <span className="font-serif italic font-normal">Our Expertise</span>
