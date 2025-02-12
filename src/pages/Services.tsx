@@ -340,8 +340,10 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
 
 const Services = () => {
   return (
-    <main className="min-h-screen bg-white font-geist">
-      <FloatingNav navItems={navItems} />
+    <main className="min-h-screen bg-black text-white font-geist">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <FloatingNav navItems={navItems} />
+      </div>
       <div className="container py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

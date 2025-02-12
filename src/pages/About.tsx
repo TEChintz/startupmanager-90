@@ -1,4 +1,3 @@
-
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Footer } from "@/components/Footer";
 import { Home, Info, Phone, ScrollText } from "lucide-react";
@@ -30,9 +29,11 @@ const navItems = [
 
 const About = () => {
   return (
-    <main className="min-h-screen bg-white font-geist">
-      <FloatingNav navItems={navItems} />
-      <div className="container">
+    <main className="min-h-screen bg-black text-white font-geist">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <FloatingNav navItems={navItems} />
+      </div>
+      <div className="container pt-20">
         <div className="max-w-4xl mx-auto py-20">
           <div className="text-center space-y-4">
             <span className="px-3 py-1 text-sm font-medium bg-purple-50 text-purple-600 rounded-full">

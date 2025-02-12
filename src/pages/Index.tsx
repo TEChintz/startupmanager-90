@@ -33,14 +33,18 @@ const navItems = [
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-white font-geist">
-      <FloatingNav navItems={navItems} />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
+    <main className="min-h-screen bg-black text-white font-geist">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <FloatingNav navItems={navItems} />
+      </div>
+      <div className="pt-20">
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </main>
   );
 };
