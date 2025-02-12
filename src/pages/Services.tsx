@@ -245,17 +245,17 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="p-8 rounded-xl border border-gray-200 hover:border-gray-300 transition-all group cursor-pointer">
+        <div className="p-8 rounded-xl border border-white/10 bg-[#222222] hover:border-white/20 transition-all group cursor-pointer">
           <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
             <div className={category.textColor}>{category.icon}</div>
           </div>
-          <h2 className="text-2xl font-semibold mb-4">{category.title}</h2>
-          <p className="text-gray-600 mb-4">{category.description}</p>
+          <h2 className="text-2xl font-semibold mb-4 text-white">{category.title}</h2>
+          <p className="text-gray-400 mb-4">{category.description}</p>
           <ul className="space-y-3">
             {category.services.map((service, idx) => (
               <li key={idx} className="flex items-center gap-3">
-                <div className="h-1.5 w-1.5 bg-gray-400 rounded-full" />
-                <span className="text-gray-600">{service.name}</span>
+                <div className="h-1.5 w-1.5 bg-gray-500 rounded-full" />
+                <span className="text-gray-400">{service.name}</span>
               </li>
             ))}
           </ul>
