@@ -1,9 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --primary-blue: 221 64% 55%;  /* This is #375CE1 in HSL */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -52,6 +54,7 @@
   }
 
   .dark {
+    --primary-blue: 221 64% 55%;  /* This is #375CE1 in HSL */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 

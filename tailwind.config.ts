@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
@@ -27,11 +26,8 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        geist: ["Geist Sans", "sans-serif"],
-        serif: ["Instrument Serif", "serif"],
-      },
       colors: {
+        'primary-blue': '#375CE1',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -65,6 +61,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        geist: ["Geist Sans", "sans-serif"],
+        serif: ["Instrument Serif", "serif"],
       },
       keyframes: {
         "accordion-down": {
