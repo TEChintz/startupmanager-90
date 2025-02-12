@@ -6,24 +6,28 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: <Globe className="h-6 w-6" />,
+    icon: <Globe className="h-6 w-6 text-red-600" />,
     title: "Digital Marketing",
     description: "Comprehensive digital marketing solutions to boost your online presence",
+    color: "bg-red-100",
   },
   {
-    icon: <Code className="h-6 w-6" />,
+    icon: <Code className="h-6 w-6 text-blue-600" />,
     title: "Web Development",
     description: "Custom web development solutions for your business needs",
+    color: "bg-blue-100",
   },
   {
-    icon: <Building2 className="h-6 w-6" />,
+    icon: <Building2 className="h-6 w-6 text-purple-600" />,
     title: "Company Registration",
     description: "Professional business registration and auditing services",
+    color: "bg-purple-100",
   },
   {
-    icon: <Film className="h-6 w-6" />,
+    icon: <Film className="h-6 w-6 text-green-600" />,
     title: "Content Creation",
     description: "Creative content solutions for your brand",
+    color: "bg-green-100",
   },
 ];
 
@@ -57,7 +61,7 @@ export const ServicesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex-none w-[300px] p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="h-12 w-12 bg-black/5 rounded-full flex items-center justify-center mb-4">
+              <div className={`h-12 w-12 ${service.color} rounded-full flex items-center justify-center mb-4`}>
                 {service.icon}
               </div>
               <h3 className="text-xl font-geist font-semibold mb-2 text-black">{service.title}</h3>
