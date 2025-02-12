@@ -59,13 +59,13 @@ export const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex-none w-[300px] p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              className="flex-none w-[300px] p-6 rounded-xl bg-[#222222] border border-white/10 hover:border-white/20 transition-shadow hover:shadow-md"
             >
               <div className={`h-12 w-12 ${service.color} rounded-full flex items-center justify-center mb-4`}>
                 {service.icon}
               </div>
-              <h3 className="text-xl font-geist font-semibold mb-2 text-black">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <h3 className="text-xl font-geist font-semibold mb-2 text-white">{service.title}</h3>
+              <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}
         </div>
