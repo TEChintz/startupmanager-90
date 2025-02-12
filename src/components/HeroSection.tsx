@@ -21,10 +21,14 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-geist font-bold tracking-tight text-[#375CE1]"
+          className="text-5xl md:text-7xl font-geist font-bold tracking-tight"
         >
-          Your Vision,{" "}
-          <span className="font-serif italic font-normal">Our Expertise</span>
+          Your{" "}
+          <span 
+            className="bg-gradient-to-r from-black via-[#375CE1] to-black text-transparent bg-clip-text"
+          >
+            Startup Manager
+          </span>
         </motion.h1>
         
         <motion.p 
