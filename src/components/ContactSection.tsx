@@ -29,7 +29,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-purple-50 to-white">
+    <div className="py-20 bg-black">
       <div className="container max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -38,10 +38,10 @@ export const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-black">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Get In <span className="font-serif italic">Touch</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
         </motion.div>
@@ -58,27 +58,27 @@ export const ContactSection = () => {
               name="name" 
               required 
               placeholder="Name" 
-              className="rounded-lg font-serif" 
+              className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
             />
             <Input 
               name="email" 
               type="email" 
               required 
               placeholder="Email" 
-              className="rounded-lg font-serif" 
+              className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
             />
           </div>
           <Input 
             name="subject" 
             required 
             placeholder="Subject" 
-            className="rounded-lg font-serif" 
+            className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
           />
           <Textarea
             name="message"
             required
             placeholder="Your message"
-            className="min-h-[150px] rounded-lg font-serif"
+            className="min-h-[150px] rounded-lg font-serif bg-white/10 text-white border-white/20"
           />
           <Button 
             type="submit" 
