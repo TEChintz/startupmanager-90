@@ -39,7 +39,7 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-md border-b border-white/10 z-50">
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 px-4">
-          <Link to="/" className="text-xl font-bold" style={{ color: '#375CE1' }}>
+          <Link to="/" className="text-xl font-bold text-white hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text">
             StartUp Manager
           </Link>
           
@@ -48,7 +48,7 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.link}
-                className="text-gray-300 hover:text-[#375CE1] transition-colors flex items-center gap-2"
+                className="text-gray-300 flex items-center gap-2 hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text"
               >
                 {item.icon}
                 <span>{item.name}</span>
@@ -69,7 +69,7 @@ export const Header = () => {
                     <Link
                       key={item.name}
                       to={item.link}
-                      className="text-gray-300 hover:text-[#375CE1] transition-colors flex items-center gap-3 text-lg"
+                      className="text-gray-300 flex items-center gap-3 text-lg hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text"
                     >
                       {item.icon}
                       <span>{item.name}</span>
