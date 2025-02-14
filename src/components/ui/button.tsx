@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "backdrop-blur-xl bg-white/10 border border-white/20 text-white",
+        default: "backdrop-blur-xl bg-white/10 border border-white/20 text-white hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text hover:border-white/40",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-white/20 backdrop-blur-xl bg-white/10 text-white",
+          "border border-white/20 backdrop-blur-xl bg-white/10 text-white hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text hover:border-white/40",
         secondary:
-          "backdrop-blur-xl bg-white/10 border border-white/20 text-white",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-white underline-offset-4 hover:underline",
+          "backdrop-blur-xl bg-white/10 border border-white/20 text-white hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text hover:border-white/40",
+        ghost: "hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text",
+        link: "text-white hover:bg-gradient-to-r hover:from-[#FF6B6B] hover:via-[#4ECDC4] hover:to-[#375CE1] hover:text-transparent hover:bg-clip-text",
       },
       size: {
         default: "h-10 px-4 py-2",

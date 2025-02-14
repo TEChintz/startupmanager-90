@@ -86,7 +86,7 @@ export const ContactSection = () => {
             type="submit" 
             size="lg" 
             disabled={isSubmitting} 
-            className="w-full rounded-lg bg-white text-black hover:bg-white/90"
+            className="w-full rounded-lg"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
