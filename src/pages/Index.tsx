@@ -9,7 +9,7 @@ import { Header } from "@/components/Header";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-black text-white font-geist">
+    <main className="min-h-screen bg-[#1A1F2C] text-white font-geist">
       <Header />
       <div className="pt-16">
         <HeroSection />
