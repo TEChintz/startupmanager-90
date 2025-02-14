@@ -1,7 +1,10 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { AuroraBackground } from "./ui/aurora-background";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 export const HeroSection = () => {
   return <div className="min-h-screen bg-black">
       <div className="space-y-8 text-center max-w-4xl mx-auto pt-32 pb-20">
@@ -54,11 +57,11 @@ export const HeroSection = () => {
         duration: 0.5,
         delay: 0.6
       }} className="flex gap-4 justify-center items-center">
-          <Button size="lg" className="rounded-full">
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild size="lg" className="rounded-full">
+            <Link to="/contact">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
-          <Button variant="outline" size="lg" className="rounded-full">
-            Learn More
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link to="/about">Learn More</Link>
           </Button>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
+
 const testimonials = [{
   name: "Sarah Johnson",
   role: "CEO at TechStart",
@@ -16,6 +17,7 @@ const testimonials = [{
   content: "Their expertise in scaling startups is unmatched. Highly recommended!",
   rating: 5
 }];
+
 export const TestimonialsSection = () => {
   return <div className="py-20 bg-black">
       <div className="container">
@@ -46,16 +48,16 @@ export const TestimonialsSection = () => {
         }} transition={{
           duration: 0.5,
           delay: index * 0.1
-        }} className="bg-white p-6 rounded-xl border border-gray-200">
+        }} className="bg-[#222222] p-6 rounded-xl border border-white/20">
               <div className="flex gap-1 mb-4">
                 {Array.from({
               length: testimonial.rating
             }).map((_, i) => <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
               </div>
-              <p className="text-gray-600 mb-4">{testimonial.content}</p>
+              <p className="text-white/80 mb-4">{testimonial.content}</p>
               <div>
-                <p className="font-poppins font-semibold text-black">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                <p className="font-poppins font-semibold text-white">{testimonial.name}</p>
+                <p className="text-sm text-gray-400">{testimonial.role}</p>
               </div>
             </motion.div>)}
         </div>

@@ -2,6 +2,7 @@ import { Building2, Users, Globe } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
 export const AboutSection = () => {
   return <section className="py-20 bg-black text-white">
       <div className="container">
@@ -76,10 +77,10 @@ export const AboutSection = () => {
           }} transition={{
             duration: 0.5,
             delay: 0.3 + index * 0.1
-          }} className="p-8 rounded-2xl bg-purple-800/20 border border-purple-500/20 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg backdrop-blur-sm">
+          }} className="p-8 rounded-2xl bg-[#222222] border border-white/20 hover:border-white/30 transition-all duration-300 hover:shadow-lg backdrop-blur-sm">
                 {item.icon}
-                <h3 className="text-xl font-poppins font-semibold mb-2 text-purple-200">{item.title}</h3>
-                <p className="text-purple-200/80">{item.description}</p>
+                <h3 className="text-xl font-poppins font-semibold mb-2 text-white">{item.title}</h3>
+                <p className="text-white/80">{item.description}</p>
               </motion.div>)}
           </div>
           
