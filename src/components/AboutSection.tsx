@@ -96,7 +96,7 @@ export const AboutSection = () => {
           delay: 0.6
         }}>
             <Link to="/about">
-              <Button size="lg" className="rounded-full bg-white text-black">
+              <Button size="lg" className="rounded-full text-white bg-neutral-900 hover:bg-neutral-800">
                 Learn More About Us
               </Button>
             </Link>
