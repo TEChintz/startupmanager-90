@@ -38,8 +38,8 @@ export const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Get In <span className="font-serif italic">Touch</span>
+          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-white">
+            Get In Touch
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
@@ -58,27 +58,27 @@ export const ContactSection = () => {
               name="name" 
               required 
               placeholder="Name" 
-              className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
+              className="rounded-lg bg-white/10 text-white border-white/20" 
             />
             <Input 
               name="email" 
               type="email" 
               required 
               placeholder="Email" 
-              className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
+              className="rounded-lg bg-white/10 text-white border-white/20" 
             />
           </div>
           <Input 
             name="subject" 
             required 
             placeholder="Subject" 
-            className="rounded-lg font-serif bg-white/10 text-white border-white/20" 
+            className="rounded-lg bg-white/10 text-white border-white/20" 
           />
           <Textarea
             name="message"
             required
             placeholder="Your message"
-            className="min-h-[150px] rounded-lg font-serif bg-white/10 text-white border-white/20"
+            className="min-h-[150px] rounded-lg bg-white/10 text-white border-white/20"
           />
           <Button 
             type="submit" 
