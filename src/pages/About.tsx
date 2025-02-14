@@ -2,15 +2,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
 const About = () => {
-  return (
-    <main className="min-h-screen bg-black text-white font-geist">
+  return <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       <div className="container pt-16">
         <div className="max-w-4xl mx-auto py-20">
           <div className="text-center space-y-4">
-            <span className="px-3 py-1 text-sm font-medium bg-purple-50 text-purple-600 rounded-full">
+            <span className="px-3 py-1 text-sm font-medium bg-purple-50 rounded-full text-black">
               Our Story
             </span>
             <h1 className="text-4xl md:text-5xl font-bold">
@@ -135,8 +133,6 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default About;
