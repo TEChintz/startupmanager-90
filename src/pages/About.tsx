@@ -12,7 +12,7 @@ const About = () => {
               Our Story
             </span>
             <h1 className="text-4xl md:text-5xl font-bold">
-              About <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">About Us</span>
+              About <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">Us</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We're passionate about transforming businesses through innovative digital solutions
