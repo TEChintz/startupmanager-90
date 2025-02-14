@@ -62,8 +62,8 @@ const About = () => {
                     <AvatarFallback className="bg-purple-800 text-purple-200">DM</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-2 text-purple-200">Deepam Modi</h3>
-                    <p className="text-purple-200/80 text-lg leading-relaxed">
+                    <h3 className="text-2xl font-semibold mb-2 text-white">Deepam Modi</h3>
+                    <p className="text-lg leading-relaxed text-white">
                       Lead Developer and Technical Architect with expertise in creating scalable solutions
                       and implementing innovative technologies to drive business growth.
                     </p>
@@ -74,9 +74,9 @@ const About = () => {
                   <Avatar className="w-20 h-20 ring-4 ring-purple-400/20">
                     <AvatarFallback className="bg-purple-800 text-purple-200">AC</AvatarFallback>
                   </Avatar>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-2 text-purple-200">Abhishek Chavan</h3>
-                    <p className="text-purple-200/80 text-lg leading-relaxed">
+                  <div className="bg-transparent">
+                    <h3 className="text-2xl font-semibold mb-2 text-white">Abhishek Chavan</h3>
+                    <p className="text-lg leading-relaxed text-white">
                       Creative Director and Strategy Lead focusing on user experience design and
                       developing comprehensive digital strategies for client success.
                     </p>
@@ -88,8 +88,8 @@ const About = () => {
                     <AvatarFallback className="bg-purple-800 text-purple-200">RK</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-2 text-purple-200">Rohit Kumar</h3>
-                    <p className="text-purple-200/80 text-lg leading-relaxed">
+                    <h3 className="text-2xl font-semibold mb-2 text-white">Rohit Kumar</h3>
+                    <p className="text-lg leading-relaxed text-white">
                       Business Development Manager specializing in market analysis and strategic partnerships,
                       driving growth through innovative business solutions and client relationships.
                     </p>
