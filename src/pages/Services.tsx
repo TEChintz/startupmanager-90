@@ -281,71 +281,41 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
   const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
 
   return (
-    <div className="space-y-6">
-      <motion.div
-        ref={cardRef}
-        style={{ opacity, y }}
-        className="group relative"
-      >
-        <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-teal-500/50 rounded-xl blur group-hover:blur-md transition-all duration-500" />
+    <motion.div
+      ref={cardRef}
+      style={{ opacity, y }}
+      className="group relative cursor-pointer"
+      onClick={() => navigate(`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}`, {
+        state: { category }
+      })}
+    >
+      <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-teal-500/50 rounded-xl blur group-hover:blur-md transition-all duration-500" />
+      
+      <div className="relative p-8 rounded-xl bg-black border border-white/10 backdrop-blur-xl hover:border-white/20 transition-all">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
         
-        <div className="relative p-8 rounded-xl bg-black border border-white/10 backdrop-blur-xl hover:border-white/20 transition-all">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
-          
-          <div className="relative mb-6">
-            <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10`}>
-              <div className={category.textColor}>
-                {getIconComponent(category.iconName)}
-              </div>
+        <div className="relative mb-6">
+          <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10`}>
+            <div className={category.textColor}>
+              {getIconComponent(category.iconName)}
             </div>
-            <div className="absolute inset-0 bg-white/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
           </div>
-
-          <h2 className="text-2xl font-semibold mb-4 text-white relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 transition-all duration-300">
-            {category.title}
-          </h2>
-          <p className="text-gray-400 mb-4 relative z-10 group-hover:text-gray-300 transition-colors duration-300">
-            {category.description}
-          </p>
+          <div className="absolute inset-0 bg-white/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
         </div>
-      </motion.div>
 
-      <div className="grid gap-4">
-        {category.services.map((service, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1 }}
-            className="group relative cursor-pointer"
-            onClick={() => navigate(`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}/${service.name.toLowerCase().replace(/\s+/g, '-')}`, {
-              state: { 
-                service,
-                category: {
-                  ...category,
-                  icon: undefined // Remove the icon from state
-                }
-              }
-            })}
-          >
-            <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative p-4 rounded-lg bg-black border border-white/10 backdrop-blur-xl group-hover:border-white/20 transition-all">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <h3 className="font-medium text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 transition-all duration-300">
-                    {service.name}
-                  </h3>
-                  <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                    {service.description}
-                  </p>
-                </div>
-                <ArrowRight className="h-4 w-4 text-gray-400 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
-            </div>
-          </motion.div>
-        ))}
+        <h2 className="text-2xl font-semibold mb-4 text-white relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 transition-all duration-300">
+          {category.title}
+        </h2>
+        <p className="text-gray-400 mb-4 relative z-10 group-hover:text-gray-300 transition-colors duration-300">
+          {category.description}
+        </p>
+
+        <div className="flex items-center gap-2 text-gray-400 group-hover:text-white transition-colors duration-300">
+          <span className="text-sm">View Services</span>
+          <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
