@@ -25,7 +25,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-20 bg-black/5">
+    <div className="py-20 bg-black">
       <div className="container">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

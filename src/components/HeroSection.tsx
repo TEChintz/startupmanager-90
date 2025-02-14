@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
-    <div className="min-h-screen bg-[#1A1F2C]">
+    <div className="min-h-screen bg-black">
       <div className="space-y-8 text-center max-w-4xl mx-auto pt-32 pb-20">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}

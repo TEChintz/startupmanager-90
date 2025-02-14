@@ -42,7 +42,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-[#222222] border border-white/10 p-12 rounded-3xl">
+            <div className="bg-black border border-white/10 p-12 rounded-3xl">
               <h2 className="text-3xl font-bold mb-6 text-white">Our Mission</h2>
               <p className="text-gray-400 leading-relaxed text-lg">
                 We're dedicated to empowering businesses with cutting-edge solutions that drive growth and innovation. 
@@ -50,7 +50,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="py-16 bg-gradient-to-br from-black to-black text-white rounded-3xl px-12">
+            <div className="py-16 bg-black text-white rounded-3xl px-12">
               <h2 className="text-4xl font-poppins font-bold mb-6 text-[#375CE1]">Meet Our Founders</h2>
               <p className="text-lg mb-12 max-w-3xl text-white/80">
                 Our team of skilled professionals is dedicated to delivering excellence in every project. 
