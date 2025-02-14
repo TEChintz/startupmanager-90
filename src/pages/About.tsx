@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe } from "lucide-react";
@@ -51,9 +50,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="py-16 bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl px-12">
-              <h2 className="text-4xl font-bold mb-6 text-purple-300">Meet Our Founders</h2>
-              <p className="text-lg mb-12 max-w-3xl text-purple-100">
+            <div className="py-16 bg-gradient-to-br from-black to-black text-white rounded-3xl px-12">
+              <h2 className="text-4xl font-poppins font-bold mb-6 text-[#375CE1]">Meet Our Founders</h2>
+              <p className="text-lg mb-12 max-w-3xl text-white/80">
                 Our team of skilled professionals is dedicated to delivering excellence in every project. 
                 With expertise in digital marketing, content creation, design, development, and business solutions, 
                 we ensure your success is our top priority.

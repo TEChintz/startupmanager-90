@@ -343,8 +343,8 @@ const Services = () => {
       <Header />
       <div className="container py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#375CE1]">
-            Our <span className="font-serif italic">Services</span>
+          <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 text-[#375CE1]">
+            Our Services
           </h1>
           <p className="text-lg text-gray-600 mb-12">
             Comprehensive solutions to help your startup grow and succeed in today's competitive market
@@ -360,8 +360,8 @@ const Services = () => {
         </div>
 
         <div className="mt-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#375CE1]">
-            All Services <span className="font-serif italic">Combo Packs</span>
+          <h2 className="text-3xl font-poppins font-bold text-center mb-12 text-[#375CE1]">
+            All Services Combo Packs
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {comboPacks.map((pack, index) => (

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900 to-black text-white">
+    <section className="py-20 bg-gradient-to-br from-black to-black text-white">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <motion.span 
@@ -24,7 +24,7 @@ export const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4 text-purple-100"
+            className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4 text-white"
           >
             Who We Are
           </motion.h2>

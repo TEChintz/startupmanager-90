@@ -23,10 +23,10 @@ export const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-5xl md:text-7xl font-poppins font-semibold tracking-tight"
         >
-          Your{" "}
-          <span 
-            className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient"
-          >
+          <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+            Your
+          </span>{" "}
+          <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
             Startup Manager
           </span>
         </motion.h1>
