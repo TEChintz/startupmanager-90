@@ -2,10 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
 const About = () => {
-  return (
-    <main className="min-h-screen bg-black text-white font-geist">
+  return <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       <div className="container pt-16">
         <div className="max-w-4xl mx-auto py-20">
@@ -14,7 +12,7 @@ const About = () => {
               Our Story
             </span>
             <h1 className="text-4xl md:text-5xl font-bold">
-              About <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">Us</span>
+              About <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">About Us</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We're passionate about transforming businesses through innovative digital solutions
@@ -135,8 +133,6 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default About;
