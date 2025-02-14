@@ -343,8 +343,10 @@ const Services = () => {
       <Header />
       <div className="container py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 text-[#375CE1]">
-            Our Services
+          <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6">
+            <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+              Our Services
+            </span>
           </h1>
           <p className="text-lg text-gray-600 mb-12">
             Comprehensive solutions to help your startup grow and succeed in today's competitive market
@@ -360,8 +362,10 @@ const Services = () => {
         </div>
 
         <div className="mt-20">
-          <h2 className="text-3xl font-poppins font-bold text-center mb-12 text-[#375CE1]">
-            All Services Combo Packs
+          <h2 className="text-3xl font-poppins font-bold text-center mb-12">
+            <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+              All Services Combo Packs
+            </span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {comboPacks.map((pack, index) => (

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-black to-black text-white">
+    <section className="py-20 bg-black text-white">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <motion.span 
@@ -24,9 +24,11 @@ export const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4 text-white"
+            className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4"
           >
-            Who We Are
+            <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+              Who We Are
+            </span>
           </motion.h2>
           
           <motion.p 

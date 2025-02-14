@@ -38,8 +38,10 @@ export const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-white">
-            Get In Touch
+          <h2 className="text-3xl md:text-4xl font-poppins font-semibold">
+            <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+              Get In Touch
+            </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.

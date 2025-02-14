@@ -2,8 +2,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const About = () => {
-  return <main className="min-h-screen bg-black text-white font-geist">
+  return (
+    <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       <div className="container pt-16">
         <div className="max-w-4xl mx-auto py-20">
@@ -12,7 +14,7 @@ const About = () => {
               Our Story
             </span>
             <h1 className="text-4xl md:text-5xl font-bold">
-              About <span className="poppins">Us</span>
+              About <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">Us</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We're passionate about transforming businesses through innovative digital solutions
@@ -49,7 +51,11 @@ const About = () => {
             </div>
 
             <div className="py-16 bg-black text-white rounded-3xl px-12">
-              <h2 className="text-4xl font-poppins font-bold mb-6 text-[#375CE1]">Meet Our Founders</h2>
+              <h2 className="text-4xl font-poppins font-bold mb-6">
+                <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+                  Meet Our Founders
+                </span>
+              </h2>
               <p className="text-lg mb-12 max-w-3xl text-white/80">
                 Our team of skilled professionals is dedicated to delivering excellence in every project. 
                 With expertise in digital marketing, content creation, design, development, and business solutions, 
@@ -129,6 +135,8 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </main>;
+    </main>
+  );
 };
+
 export default About;

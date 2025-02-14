@@ -42,8 +42,10 @@ export const ServicesSection = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-between items-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-[#375CE1]">
-            Our Services
+          <h2 className="text-3xl md:text-4xl font-poppins font-semibold">
+            <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+              Our Services
+            </span>
           </h2>
           <Button asChild variant="outline" className="rounded-lg bg-white text-black hover:bg-white/90">
             <Link to="/services">

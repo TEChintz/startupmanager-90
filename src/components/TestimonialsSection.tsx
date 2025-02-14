@@ -32,9 +32,11 @@ export const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-poppins font-semibold mb-16 text-center text-[#375CE1]"
+          className="text-3xl md:text-4xl font-poppins font-semibold mb-16 text-center"
         >
-          Trusted by Our Innovators
+          <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
+            Trusted by Our Innovators
+          </span>
         </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
