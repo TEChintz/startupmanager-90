@@ -1,10 +1,24 @@
-
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, Package, ArrowRight } from "lucide-react";
+import { ArrowLeft, Package, ArrowRight, Globe, Code, Building2, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+
+const getIconComponent = (iconName: string) => {
+  switch (iconName) {
+    case "Globe":
+      return <Globe className="h-8 w-8" />;
+    case "Code":
+      return <Code className="h-8 w-8" />;
+    case "Building2":
+      return <Building2 className="h-8 w-8" />;
+    case "Film":
+      return <Film className="h-8 w-8" />;
+    default:
+      return <Package className="h-8 w-8" />;
+  }
+};
 
 export default function ServiceDetail() {
   const location = useLocation();
@@ -61,7 +75,9 @@ export default function ServiceDetail() {
             className="flex items-center gap-4 mb-6"
           >
             <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center`}>
-              <div className={category.textColor}>{category.icon}</div>
+              <div className={category.textColor}>
+                {getIconComponent(category.iconName)}
+              </div>
             </div>
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">{service.name}</h1>

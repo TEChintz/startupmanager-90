@@ -42,7 +42,7 @@ const navItems = [
 const serviceCategories = [
   {
     title: "Digital Marketing",
-    icon: <Globe className="h-8 w-8" />,
+    iconName: "Globe",
     color: "bg-red-100",
     textColor: "text-red-600",
     description: "Comprehensive digital marketing solutions to boost your online presence",
@@ -87,7 +87,7 @@ const serviceCategories = [
   },
   {
     title: "Web Development",
-    icon: <Code className="h-8 w-8" />,
+    iconName: "Code",
     color: "bg-blue-100",
     textColor: "text-blue-600",
     description: "Custom web development solutions for your business needs",
@@ -132,7 +132,7 @@ const serviceCategories = [
   },
   {
     title: "Company Registration & Auditing",
-    icon: <Building2 className="h-8 w-8" />,
+    iconName: "Building2",
     color: "bg-purple-100",
     textColor: "text-purple-600",
     description: "Professional business registration and auditing services",
@@ -177,7 +177,7 @@ const serviceCategories = [
   },
   {
     title: "Content Creation & Management",
-    icon: <Film className="h-8 w-8" />,
+    iconName: "Film",
     color: "bg-green-100",
     textColor: "text-green-600",
     description: "Creative content solutions for your brand",
@@ -255,6 +255,21 @@ const GlowingBackground = () => {
   );
 };
 
+const getIconComponent = (iconName: string) => {
+  switch (iconName) {
+    case "Globe":
+      return <Globe className="h-8 w-8" />;
+    case "Code":
+      return <Code className="h-8 w-8" />;
+    case "Building2":
+      return <Building2 className="h-8 w-8" />;
+    case "Film":
+      return <Film className="h-8 w-8" />;
+    default:
+      return <Package className="h-8 w-8" />;
+  }
+};
+
 const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) => {
   const navigate = useNavigate();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -279,8 +294,8 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
           
           <div className="relative mb-6">
             <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10`}>
-              <div className={`${category.textColor} transform group-hover:rotate-12 transition-transform duration-500`}>
-                {category.icon}
+              <div className={category.textColor}>
+                {getIconComponent(category.iconName)}
               </div>
             </div>
             <div className="absolute inset-0 bg-white/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
@@ -304,7 +319,13 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
             transition={{ delay: idx * 0.1 }}
             className="group relative cursor-pointer"
             onClick={() => navigate(`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}/${service.name.toLowerCase().replace(/\s+/g, '-')}`, {
-              state: { service, category }
+              state: { 
+                service,
+                category: {
+                  ...category,
+                  icon: undefined // Remove the icon from state
+                }
+              }
             })}
           >
             <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
