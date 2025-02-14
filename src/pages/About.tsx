@@ -2,8 +2,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const About = () => {
-  return <main className="min-h-screen bg-black text-white font-geist">
+  return (
+    <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       <div className="container pt-16">
         <div className="max-w-4xl mx-auto py-20">
@@ -133,6 +135,8 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </main>;
+    </main>
+  );
 };
+
 export default About;

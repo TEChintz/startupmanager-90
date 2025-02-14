@@ -248,7 +248,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
           <div className={`h-16 w-16 ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
             <div className={category.textColor}>{category.icon}</div>
           </div>
-          <h2 className="text-2xl font-semibold mb-4 text-[#375CE1]">{category.title}</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-white">{category.title}</h2>
           <p className="text-gray-400 mb-4">{category.description}</p>
           <ul className="space-y-3">
             {category.services.map((service, idx) => (
@@ -262,7 +262,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
       </DialogTrigger>
       <DialogContent className="max-w-4xl h-[90vh] p-0 gap-0">
         <DialogHeader className="px-6 py-4 border-b">
-          <DialogTitle className="text-[#375CE1]">{category.title}</DialogTitle>
+          <DialogTitle className="text-white">{category.title}</DialogTitle>
           <DialogDescription>{category.description}</DialogDescription>
         </DialogHeader>
         <div className="flex h-[calc(90vh-85px)]">
@@ -274,7 +274,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
               {category.services.map((service, idx) => (
                 <div 
                   key={idx}
-                  className="px-3 py-2 rounded-lg text-sm hover:bg-white hover:shadow-sm transition-all cursor-pointer text-[#375CE1]"
+                  className="px-3 py-2 rounded-lg text-sm hover:bg-white hover:shadow-sm transition-all cursor-pointer text-white"
                 >
                   {service.name}
                 </div>
@@ -292,7 +292,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-4 mb-6">
                       <div>
-                        <h3 className="text-xl font-semibold text-[#375CE1]">
+                        <h3 className="text-xl font-semibold text-white">
                           {service.name}
                         </h3>
                         <p className="mt-2 text-gray-600">
@@ -300,22 +300,22 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
                         </p>
                       </div>
                       <div className="flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full">
-                        <Package className="h-4 w-4 text-[#375CE1]" />
-                        <span className="text-sm font-semibold text-[#375CE1]">
+                        <Package className="h-4 w-4 text-white" />
+                        <span className="text-sm font-semibold text-white">
                           {service.price}
                         </span>
                       </div>
                     </div>
                     
                     <div className="space-y-4">
-                      <h4 className="font-medium text-[#375CE1]">Features & Benefits</h4>
+                      <h4 className="font-medium text-white">Features & Benefits</h4>
                       <div className="grid gap-3">
                         {service.features.map((feature, featureIdx) => (
                           <div
                             key={featureIdx}
                             className="flex items-center gap-3 text-gray-600"
                           >
-                            <div className="h-1.5 w-1.5 rounded-full bg-[#375CE1]" />
+                            <div className="h-1.5 w-1.5 rounded-full bg-white" />
                             <span className="text-sm">{feature}</span>
                           </div>
                         ))}
@@ -374,15 +374,15 @@ const Services = () => {
                 className="p-6 rounded-xl border border-white/10 bg-[#222222] hover:border-white/20 transition-all hover:shadow-lg"
               >
                 <div className="h-12 w-12 bg-white/5 rounded-full flex items-center justify-center mb-4">
-                  <Package className="h-6 w-6 text-[#375CE1]" />
+                  <Package className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-[#375CE1]">{pack.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{pack.title}</h3>
                 <p className="text-gray-400 mb-4">{pack.description}</p>
-                <div className="text-2xl font-bold mb-4 text-[#375CE1]">{pack.price}</div>
+                <div className="text-2xl font-bold mb-4 text-white">{pack.price}</div>
                 <ul className="space-y-3">
                   {pack.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 bg-[#375CE1] rounded-full" />
+                      <div className="h-1.5 w-1.5 bg-white rounded-full" />
                       <span className="text-sm text-gray-400">{feature}</span>
                     </li>
                   ))}
@@ -393,7 +393,7 @@ const Services = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#375CE1]">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
             Ready to transform your startup?
           </h3>
           <div className="flex gap-4 justify-center">

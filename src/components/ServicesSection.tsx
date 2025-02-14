@@ -47,7 +47,7 @@ export const ServicesSection = () => {
               Our Services
             </span>
           </h2>
-          <Button asChild variant="outline" className="rounded-lg bg-white text-black hover:bg-white/90">
+          <Button asChild variant="outline" className="rounded-lg">
             <Link to="/services">
               See All Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -66,7 +66,7 @@ export const ServicesSection = () => {
               <div className={`h-12 w-12 ${service.color} rounded-full flex items-center justify-center mb-4`}>
                 {service.icon}
               </div>
-              <h3 className="text-xl font-poppins font-semibold mb-2 text-[#375CE1]">{service.title}</h3>
+              <h3 className="text-xl font-poppins font-semibold mb-2 text-white">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}
