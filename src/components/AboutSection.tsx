@@ -26,7 +26,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4 text-purple-100"
           >
-            Who We <span className="font-serif italic">Are</span>
+            Who We Are
           </motion.h2>
           
           <motion.p 
@@ -66,7 +66,7 @@ export const AboutSection = () => {
                 className="p-8 rounded-2xl bg-purple-800/20 border border-purple-500/20 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg backdrop-blur-sm"
               >
                 {item.icon}
-                <h3 className="text-xl font-semibold mb-2 text-purple-200">{item.title}</h3>
+                <h3 className="text-xl font-poppins font-semibold mb-2 text-purple-200">{item.title}</h3>
                 <p className="text-purple-200/80">{item.description}</p>
               </motion.div>
             ))}

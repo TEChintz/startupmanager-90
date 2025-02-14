@@ -34,7 +34,7 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-poppins font-semibold mb-16 text-center text-[#375CE1]"
         >
-          Trusted by <span className="font-serif italic">Innovators</span>
+          Trusted by Our Innovators
         </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
