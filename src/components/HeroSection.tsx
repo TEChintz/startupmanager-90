@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
-    <AuroraBackground>
-      <div className="space-y-8 text-center max-w-4xl mx-auto">
+    <div className="min-h-screen bg-[#1A1F2C]">
+      <div className="space-y-8 text-center max-w-4xl mx-auto pt-32 pb-20">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="px-3 py-1 text-sm font-medium bg-black/5 rounded-full inline-block"
+          className="px-3 py-1 text-sm font-medium bg-white/5 rounded-full inline-block text-white"
         >
           Launching something special? We're here to help
         </motion.span>
@@ -21,11 +21,11 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-geist font-bold tracking-tight"
+          className="text-5xl md:text-7xl font-poppins font-semibold tracking-tight"
         >
           Your{" "}
           <span 
-            className="bg-gradient-to-r from-black via-[#375CE1] to-black text-transparent bg-clip-text"
+            className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient"
           >
             Startup Manager
           </span>
@@ -35,7 +35,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl text-gray-600 max-w-2xl mx-auto font-geist"
+          className="text-xl text-gray-400 max-w-2xl mx-auto font-geist"
         >
           We help ambitious startups scale from zero to hero with our proven growth strategies and hands-on support.
         </motion.p>
@@ -54,6 +54,6 @@ export const HeroSection = () => {
           </Button>
         </motion.div>
       </div>
-    </AuroraBackground>
+    </div>
   );
 };

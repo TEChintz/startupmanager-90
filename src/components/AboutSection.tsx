@@ -24,7 +24,7 @@ export const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold mt-6 mb-4 text-purple-100"
+            className="text-3xl md:text-4xl font-poppins font-semibold mt-6 mb-4 text-purple-100"
           >
             Who We <span className="font-serif italic">Are</span>
           </motion.h2>

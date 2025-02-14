@@ -32,7 +32,7 @@ export const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-geist font-bold mb-16 text-center text-[#375CE1]"
+          className="text-3xl md:text-4xl font-poppins font-semibold mb-16 text-center text-[#375CE1]"
         >
           Trusted by <span className="font-serif italic">Innovators</span>
         </motion.h2>
@@ -53,7 +53,7 @@ export const TestimonialsSection = () => {
               </div>
               <p className="text-gray-600 mb-4">{testimonial.content}</p>
               <div>
-                <p className="font-geist font-semibold text-[#375CE1]">{testimonial.name}</p>
+                <p className="font-poppins font-semibold text-[#375CE1]">{testimonial.name}</p>
                 <p className="text-sm text-gray-500">{testimonial.role}</p>
               </div>
             </motion.div>
