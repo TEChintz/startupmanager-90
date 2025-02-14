@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="relative">
         <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
           <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">StartUp Manager</h4>
+            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">StartUp Manager</h4>
             <nav className="flex flex-col space-y-3">
               <a href="/about" className="text-purple-100 hover:text-purple-300 transition-colors">About Us</a>
               <a href="/services" className="text-purple-100 hover:text-purple-300 transition-colors">Services</a>
@@ -19,7 +19,7 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">
+            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
               Resources
             </h4>
             <nav className="flex flex-col space-y-3">
@@ -30,7 +30,7 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">
+            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
               Legal
             </h4>
             <nav className="flex flex-col space-y-3">
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">
+            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
               Connect
             </h4>
             <div className="flex space-x-4">
@@ -55,7 +55,7 @@ export const Footer = () => {
                 <Mail className="h-5 w-5 text-purple-200" />
               </Button>
             </div>
-            <p className="text-sm text-purple-200">
+            <p className="text-sm text-white">
               Contact us at: hello@startupmanager.com
             </p>
           </div>
@@ -63,8 +63,8 @@ export const Footer = () => {
         
         <div className="container mt-8 pt-8 px-8 max-w-7xl mx-auto border-t border-purple-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-purple-200">© 2025 StartUp Manager. All rights reserved.</p>
-            <p className="text-sm text-purple-200 mt-4 md:mt-0">Made with ❤️ by StartUp Manager Team</p>
+            <p className="text-sm text-white">© 2025 StartUp Manager. All rights reserved.</p>
+            <p className="text-sm mt-4 md:mt-0 text-white">Made with ❤️ by StartUp Manager Team</p>
           </div>
         </div>
       </div>
