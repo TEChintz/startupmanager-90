@@ -52,9 +52,9 @@ export const AboutSection = () => {
             A passionate team dedicated to transforming visions into reality
           </motion.p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 bg-black">
             {[{
-            icon: <Building2 className="w-12 h-12 mx-auto mb-4 text-purple-300" />,
+            icon: <Building2 className="w-12 h-12 mx-auto mb-4 text-purple-300 bg-transparent" />,
             title: "Our Story",
             description: "Founded with a vision to transform how businesses grow in the digital age."
           }, {

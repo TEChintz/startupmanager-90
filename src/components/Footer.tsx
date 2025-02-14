@@ -1,24 +1,16 @@
-
 import { Github, Mail, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 import { AuroraBackground } from "./ui/aurora-background";
-
 export const Footer = () => {
-  return (
-    <footer className="w-full relative py-12">
-      <AuroraBackground
-        className="absolute inset-0 !h-full"
-        showRadialGradient={false}
-      >
+  return <footer className="w-full relative py-12">
+      <AuroraBackground className="absolute inset-0 !h-full" showRadialGradient={false}>
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 to-black/95" />
       </AuroraBackground>
       
       <div className="relative">
         <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
           <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">
-              StartUP Manager
-            </h4>
+            <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200">StartUp Manager</h4>
             <nav className="flex flex-col space-y-3">
               <a href="/about" className="text-purple-100 hover:text-purple-300 transition-colors">About Us</a>
               <a href="/services" className="text-purple-100 hover:text-purple-300 transition-colors">Services</a>
@@ -71,15 +63,10 @@ export const Footer = () => {
         
         <div className="container mt-8 pt-8 px-8 max-w-7xl mx-auto border-t border-purple-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-purple-200">
-              © 2024 StartUP Manager. All rights reserved.
-            </p>
-            <p className="text-sm text-purple-200 mt-4 md:mt-0">
-              Made with ❤️ by StartUP Manager Team
-            </p>
+            <p className="text-sm text-purple-200">© 2025 StartUp Manager. All rights reserved.</p>
+            <p className="text-sm text-purple-200 mt-4 md:mt-0">Made with ❤️ by StartUp Manager Team</p>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
