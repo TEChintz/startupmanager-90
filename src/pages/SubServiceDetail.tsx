@@ -495,6 +495,497 @@ const serviceDetail = {
         description: "Helped an e-commerce site achieve record organic traffic and sales through technical SEO and content optimization."
       }
     ]
+  },
+  "Frontend Development": {
+    hero: {
+      title: "Frontend Development Services",
+      description: "Create stunning, responsive, and high-performance web applications with our expert frontend development services. We combine modern technologies with best practices to deliver exceptional user experiences.",
+      platforms: ["React", "Vue.js", "Next.js", "TypeScript", "TailwindCSS"]
+    },
+    pricing: {
+      starter: {
+        price: "$2,999/project",
+        features: [
+          "Single page website",
+          "Responsive design",
+          "Basic animations",
+          "Contact form integration",
+          "Basic SEO optimization",
+          "Cross-browser compatibility",
+          "3 rounds of revisions"
+        ]
+      },
+      professional: {
+        price: "$5,999/project",
+        features: [
+          "Multi-page web application",
+          "Advanced responsive design",
+          "Complex animations",
+          "API integration",
+          "Performance optimization",
+          "Advanced SEO setup",
+          "User authentication",
+          "CMS integration",
+          "5 rounds of revisions"
+        ]
+      },
+      enterprise: {
+        price: "Custom Quote",
+        features: [
+          "Enterprise-scale application",
+          "Custom feature development",
+          "Advanced state management",
+          "Complex integrations",
+          "High-performance optimization",
+          "CI/CD setup",
+          "Testing automation",
+          "Custom admin dashboard",
+          "Unlimited revisions"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Discovery & Planning",
+        description: "We begin by understanding your business needs and planning the technical architecture.",
+        steps: [
+          "Requirements gathering",
+          "Technical specification",
+          "UI/UX planning",
+          "Technology stack selection",
+          "Project timeline creation"
+        ]
+      },
+      {
+        title: "Design & Prototyping",
+        description: "Create visual designs and interactive prototypes for your application.",
+        steps: [
+          "Wireframe creation",
+          "UI design",
+          "Component architecture",
+          "Prototype development",
+          "Design system setup"
+        ]
+      },
+      {
+        title: "Development & Testing",
+        description: "Build and test your application with attention to detail and quality.",
+        steps: [
+          "Component development",
+          "Integration implementation",
+          "Responsive testing",
+          "Performance optimization",
+          "Cross-browser testing"
+        ]
+      },
+      {
+        title: "Deployment & Support",
+        description: "Launch your application and provide ongoing support and maintenance.",
+        steps: [
+          "Production deployment",
+          "Performance monitoring",
+          "Bug fixes",
+          "Feature updates",
+          "Ongoing maintenance"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Modern Technology",
+        description: "Leverage the latest frontend technologies and frameworks for optimal performance.",
+        icon: Rocket
+      },
+      {
+        title: "Responsive Design",
+        description: "Ensure your application works perfectly across all devices and screen sizes.",
+        icon: Users
+      },
+      {
+        title: "Performance First",
+        description: "Optimize for speed and performance to provide the best user experience.",
+        icon: BarChart3
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Build with scalability in mind to support your future growth.",
+        icon: Target
+      },
+      {
+        title: "Security Focus",
+        description: "Implement security best practices to protect your application and users.",
+        icon: Shield
+      },
+      {
+        title: "Analytics Integration",
+        description: "Track user behavior and application performance with detailed analytics.",
+        icon: PieChart
+      }
+    ],
+    faq: [
+      {
+        question: "How long does it take to develop a frontend application?",
+        answer: "Development time varies based on complexity. A simple website typically takes 4-6 weeks, while complex applications can take 3-6 months or more. We'll provide a detailed timeline during the discovery phase."
+      },
+      {
+        question: "Do you provide ongoing maintenance?",
+        answer: "Yes, we offer various maintenance packages to keep your application up-to-date, secure, and performing optimally. This includes regular updates, bug fixes, and feature enhancements."
+      },
+      {
+        question: "Can you work with our existing design team?",
+        answer: "Absolutely! We can collaborate with your internal teams or other agencies. We're experienced in working with design handoffs from various tools like Figma, Adobe XD, or Sketch."
+      },
+      {
+        question: "What technologies do you use?",
+        answer: "We specialize in modern JavaScript frameworks like React, Vue.js, and Next.js, along with TypeScript for type safety. We also use modern CSS frameworks like Tailwind CSS for styling."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "E-commerce Platform Redesign",
+        metrics: [
+          "45% increase in conversion rate",
+          "65% improvement in page load speed",
+          "32% reduction in bounce rate"
+        ],
+        description: "Completely redesigned and rebuilt an e-commerce platform using React and Next.js, resulting in significantly improved performance and user engagement."
+      },
+      {
+        title: "SaaS Dashboard Development",
+        metrics: [
+          "89% positive user feedback",
+          "3x faster data loading",
+          "50% reduction in support tickets"
+        ],
+        description: "Developed a complex SaaS dashboard with real-time data visualization and advanced filtering capabilities."
+      }
+    ]
+  },
+  "Backend Development": {
+    hero: {
+      title: "Backend Development Services",
+      description: "Build robust, scalable, and secure backend systems that power your applications. Our backend development services ensure your data and business logic are handled efficiently and reliably.",
+      platforms: ["Node.js", "Python", "Java", "AWS", "Azure", "Docker"]
+    },
+    pricing: {
+      starter: {
+        price: "$3,999/project",
+        features: [
+          "Basic API development",
+          "Database setup",
+          "User authentication",
+          "Basic admin panel",
+          "API documentation",
+          "Security implementation",
+          "3 months support"
+        ]
+      },
+      professional: {
+        price: "$7,999/project",
+        features: [
+          "Advanced API development",
+          "Complex database architecture",
+          "OAuth integration",
+          "Advanced admin dashboard",
+          "Automated testing",
+          "CI/CD pipeline",
+          "Performance monitoring",
+          "6 months support"
+        ]
+      },
+      enterprise: {
+        price: "Custom Quote",
+        features: [
+          "Microservices architecture",
+          "Custom scalability solutions",
+          "High availability setup",
+          "Load balancing",
+          "Advanced security measures",
+          "24/7 monitoring",
+          "Disaster recovery",
+          "1 year support"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Architecture Planning",
+        description: "Design a robust and scalable backend architecture that meets your needs.",
+        steps: [
+          "Requirements analysis",
+          "System architecture design",
+          "Database schema planning",
+          "API endpoint mapping",
+          "Security planning"
+        ]
+      },
+      {
+        title: "Development & Integration",
+        description: "Build secure and efficient backend systems with proper integration points.",
+        steps: [
+          "Database implementation",
+          "API development",
+          "Authentication setup",
+          "Third-party integrations",
+          "Testing framework setup"
+        ]
+      },
+      {
+        title: "Testing & Security",
+        description: "Ensure your backend is secure, reliable, and performs well under load.",
+        steps: [
+          "Unit testing",
+          "Integration testing",
+          "Security testing",
+          "Load testing",
+          "Performance optimization"
+        ]
+      },
+      {
+        title: "Deployment & Monitoring",
+        description: "Deploy your backend and set up proper monitoring and maintenance.",
+        steps: [
+          "Production deployment",
+          "Monitoring setup",
+          "Logging implementation",
+          "Backup configuration",
+          "Documentation completion"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Scalable Systems",
+        description: "Build backends that can handle growth and increasing loads efficiently.",
+        icon: Rocket
+      },
+      {
+        title: "Data Security",
+        description: "Implement robust security measures to protect sensitive data.",
+        icon: Shield
+      },
+      {
+        title: "High Performance",
+        description: "Optimize for speed and efficiency in data processing and delivery.",
+        icon: BarChart3
+      },
+      {
+        title: "Reliable Infrastructure",
+        description: "Create stable and reliable systems with proper error handling.",
+        icon: Target
+      },
+      {
+        title: "Easy Integration",
+        description: "Build APIs that are easy to integrate with other systems.",
+        icon: Users
+      },
+      {
+        title: "Clear Documentation",
+        description: "Provide comprehensive documentation for all backend systems.",
+        icon: PieChart
+      }
+    ],
+    faq: [
+      {
+        question: "How do you ensure data security?",
+        answer: "We implement industry-standard security practices including encryption, secure authentication, regular security audits, and compliance with data protection regulations."
+      },
+      {
+        question: "Can you handle large-scale applications?",
+        answer: "Yes, we design backends with scalability in mind, using microservices architecture, load balancing, and efficient database design to handle high traffic and data volumes."
+      },
+      {
+        question: "What about maintenance and updates?",
+        answer: "We provide ongoing maintenance packages that include regular updates, security patches, performance monitoring, and technical support."
+      },
+      {
+        question: "Do you provide API documentation?",
+        answer: "Yes, we provide comprehensive API documentation using tools like Swagger/OpenAPI, including detailed endpoint descriptions, request/response examples, and integration guides."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "Payment Processing System",
+        metrics: [
+          "99.99% uptime achieved",
+          "150ms average response time",
+          "100,000+ transactions per day"
+        ],
+        description: "Developed a highly reliable payment processing backend system handling millions of dollars in transactions monthly."
+      },
+      {
+        title: "Social Platform API",
+        metrics: [
+          "5 million+ API requests daily",
+          "50ms average response time",
+          "95% reduction in server costs"
+        ],
+        description: "Built a scalable API system for a social media platform, handling millions of users and real-time updates."
+      }
+    ]
+  },
+  "Full Stack Development": {
+    hero: {
+      title: "Full Stack Development Services",
+      description: "End-to-end web application development combining powerful backends with beautiful frontends. We deliver complete solutions that perfectly align with your business needs.",
+      platforms: ["MERN Stack", "MEAN Stack", "Python/Django", "Ruby on Rails", "Cloud Platforms"]
+    },
+    pricing: {
+      starter: {
+        price: "$5,999/project",
+        features: [
+          "Full stack web application",
+          "Responsive frontend",
+          "RESTful API backend",
+          "Database integration",
+          "User authentication",
+          "Basic admin panel",
+          "3 months support"
+        ]
+      },
+      professional: {
+        price: "$12,999/project",
+        features: [
+          "Advanced web application",
+          "Complex frontend features",
+          "Scalable backend architecture",
+          "Advanced database design",
+          "OAuth & social login",
+          "Advanced admin dashboard",
+          "API documentation",
+          "6 months support"
+        ]
+      },
+      enterprise: {
+        price: "Custom Quote",
+        features: [
+          "Enterprise-grade application",
+          "Custom feature development",
+          "Microservices architecture",
+          "High availability setup",
+          "Advanced security features",
+          "Custom integrations",
+          "Complete documentation",
+          "1 year support"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Planning & Architecture",
+        description: "Comprehensive planning for both frontend and backend systems.",
+        steps: [
+          "Requirements gathering",
+          "System architecture design",
+          "Technology stack selection",
+          "Database design",
+          "UI/UX planning"
+        ]
+      },
+      {
+        title: "Frontend Development",
+        description: "Build an engaging and responsive user interface.",
+        steps: [
+          "UI component development",
+          "State management setup",
+          "API integration",
+          "Responsive design",
+          "Performance optimization"
+        ]
+      },
+      {
+        title: "Backend Development",
+        description: "Create a robust and scalable backend system.",
+        steps: [
+          "API development",
+          "Database implementation",
+          "Authentication system",
+          "Business logic coding",
+          "Security implementation"
+        ]
+      },
+      {
+        title: "Integration & Deployment",
+        description: "Bring everything together and deploy to production.",
+        steps: [
+          "System integration",
+          "Testing & QA",
+          "Production deployment",
+          "Monitoring setup",
+          "Documentation"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Complete Solution",
+        description: "Get everything you need in one package, from frontend to backend.",
+        icon: Package
+      },
+      {
+        title: "Seamless Integration",
+        description: "Perfect harmony between frontend and backend systems.",
+        icon: Target
+      },
+      {
+        title: "Optimized Performance",
+        description: "End-to-end optimization for the best possible performance.",
+        icon: BarChart3
+      },
+      {
+        title: "Scalable Architecture",
+        description: "Built to grow with your business needs.",
+        icon: Rocket
+      },
+      {
+        title: "Comprehensive Security",
+        description: "Security best practices implemented at all levels.",
+        icon: Shield
+      },
+      {
+        title: "Single Point of Contact",
+        description: "One team handling all aspects of development.",
+        icon: Users
+      }
+    ],
+    faq: [
+      {
+        question: "How long does full stack development take?",
+        answer: "Project timelines vary based on complexity. Simple applications typically take 2-3 months, while complex enterprise solutions can take 6-12 months or more."
+      },
+      {
+        question: "What technology stack do you recommend?",
+        answer: "We recommend stacks based on your specific needs, scalability requirements, and team expertise. Popular choices include MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) stacks."
+      },
+      {
+        question: "Do you provide source code and documentation?",
+        answer: "Yes, you receive full ownership of the source code and comprehensive documentation including setup guides, API documentation, and maintenance instructions."
+      },
+      {
+        question: "Can you take over an existing project?",
+        answer: "Yes, we can take over existing projects. We'll start with a thorough code review and gradually implement improvements while maintaining functionality."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "E-learning Platform",
+        metrics: [
+          "100,000+ active users",
+          "99.9% system availability",
+          "40% reduction in loading times"
+        ],
+        description: "Built a comprehensive e-learning platform with video streaming, interactive quizzes, and real-time progress tracking."
+      },
+      {
+        title: "Real Estate Management System",
+        metrics: [
+          "500+ properties managed",
+          "85% process automation",
+          "60% reduction in manual work"
+        ],
+        description: "Developed a full-featured real estate management system with property listing, tenant management, and payment processing."
+      }
+    ]
   }
 };
 
