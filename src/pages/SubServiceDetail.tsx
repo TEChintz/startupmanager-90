@@ -1,10 +1,175 @@
 
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, Package, ArrowRight, Check } from "lucide-react";
+import { ArrowLeft, Package, ArrowRight, Check, Clock, Target, BarChart3, Shield, Users, PieChart, Rocket, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+
+const serviceDetail = {
+  "Meta Ads - Social Media Advertising": {
+    hero: {
+      title: "Meta Ads & Social Media Marketing",
+      description: "Unlock the full potential of social media advertising with our comprehensive Meta Ads management service. We help businesses reach their target audience effectively across Facebook, Instagram, and other Meta platforms.",
+      platforms: ["Facebook", "Instagram", "Messenger", "WhatsApp", "Audience Network"]
+    },
+    pricing: {
+      starter: {
+        price: "$499/month",
+        features: [
+          "Basic ad campaign setup",
+          "2 ad creatives per month",
+          "Monthly performance report",
+          "Basic audience targeting",
+          "Campaign optimization"
+        ]
+      },
+      professional: {
+        price: "$999/month",
+        features: [
+          "Advanced campaign setup",
+          "5 ad creatives per month",
+          "Bi-weekly performance reports",
+          "Custom audience creation",
+          "A/B testing",
+          "Remarketing campaigns",
+          "Competitor analysis"
+        ]
+      },
+      enterprise: {
+        price: "$1,999/month",
+        features: [
+          "Full-service campaign management",
+          "Unlimited ad creatives",
+          "Weekly performance reports",
+          "Advanced audience targeting",
+          "Comprehensive A/B testing",
+          "Dynamic remarketing",
+          "Cross-platform optimization",
+          "Dedicated account manager",
+          "Custom analytics dashboard"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Discovery & Strategy",
+        description: "We begin by understanding your business goals, target audience, and current marketing efforts. Our team develops a customized strategy aligned with your objectives.",
+        steps: [
+          "Business goals analysis",
+          "Target audience research",
+          "Competitor analysis",
+          "Channel selection",
+          "Budget planning"
+        ]
+      },
+      {
+        title: "Campaign Setup",
+        description: "Our experts set up your campaigns with precision, ensuring all technical aspects are optimized for maximum performance.",
+        steps: [
+          "Account structure optimization",
+          "Tracking pixel implementation",
+          "Custom audience creation",
+          "Ad creative development",
+          "Copy and messaging strategy"
+        ]
+      },
+      {
+        title: "Optimization & Management",
+        description: "We continuously monitor and optimize your campaigns to ensure the best possible results.",
+        steps: [
+          "Daily performance monitoring",
+          "Bid management",
+          "Budget optimization",
+          "A/B testing",
+          "Creative optimization"
+        ]
+      },
+      {
+        title: "Reporting & Analysis",
+        description: "Regular reporting keeps you informed of campaign performance and helps identify opportunities for improvement.",
+        steps: [
+          "Custom dashboard setup",
+          "Regular performance reports",
+          "ROI analysis",
+          "Insights and recommendations",
+          "Strategy refinement"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Increased Brand Awareness",
+        description: "Build a strong online presence and increase visibility among your target audience through strategic ad placement and content.",
+        icon: Users
+      },
+      {
+        title: "Better ROI",
+        description: "Optimize your advertising spend with data-driven decisions and continuous campaign improvements.",
+        icon: PieChart
+      },
+      {
+        title: "Precise Targeting",
+        description: "Reach exactly who you want with advanced audience targeting and segmentation capabilities.",
+        icon: Target
+      },
+      {
+        title: "Performance Tracking",
+        description: "Get detailed insights into your campaign performance with comprehensive analytics and reporting.",
+        icon: BarChart3
+      },
+      {
+        title: "Quick Results",
+        description: "See immediate impact with carefully crafted campaigns that start delivering results from day one.",
+        icon: Rocket
+      },
+      {
+        title: "Brand Protection",
+        description: "Ensure your brand's reputation with careful ad placement and content monitoring.",
+        icon: Shield
+      }
+    ],
+    faq: [
+      {
+        question: "How long does it take to see results from Meta Ads?",
+        answer: "While initial results can be seen within the first few days, we typically recommend a minimum 3-month commitment to fully optimize campaigns and achieve sustainable results. The timeline varies based on factors like budget, competition, and campaign objectives."
+      },
+      {
+        question: "What budget do you recommend for Meta Ads?",
+        answer: "We recommend starting with a minimum budget of $500/month for ad spend, plus management fees. This allows for proper testing and optimization while gathering meaningful data. The ideal budget depends on your industry, competition, and business goals."
+      },
+      {
+        question: "How do you measure success?",
+        answer: "We track various KPIs including ROAS (Return on Ad Spend), CPC (Cost per Click), CTR (Click-Through Rate), conversion rates, and engagement metrics. Success metrics are tailored to your specific business goals and campaign objectives."
+      },
+      {
+        question: "Can you work with my existing ad accounts?",
+        answer: "Yes, we can work with your existing Meta Ads accounts. We'll perform a comprehensive audit and optimize the account structure before launching new campaigns."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "E-commerce Success Story",
+        metrics: [
+          "300% increase in ROAS",
+          "50% reduction in CPA",
+          "2x increase in conversion rate"
+        ],
+        description: "Helped an e-commerce client achieve record sales through targeted Meta Ads campaigns and strategic audience segmentation."
+      },
+      {
+        title: "Local Business Growth",
+        metrics: [
+          "5x increase in qualified leads",
+          "40% decrease in cost per lead",
+          "200% increase in store visits"
+        ],
+        description: "Assisted a local business in expanding their customer base through location-based targeting and custom audience creation."
+      }
+    ]
+  }
+  // Add similar detailed information for other services
+};
 
 export default function SubServiceDetail() {
   const location = useLocation();
@@ -26,43 +191,7 @@ export default function SubServiceDetail() {
     );
   }
 
-  const additionalFeatures = {
-    "Meta Ads - Social Media Advertising": {
-      whatWeOffer: [
-        "Custom audience targeting and segmentation",
-        "Creative ad design and copywriting",
-        "A/B testing of ad variants",
-        "Regular performance optimization",
-        "Monthly reporting and analytics",
-        "Campaign strategy adjustments",
-        "Competitor analysis",
-        "Budget optimization"
-      ],
-      process: [
-        "Initial consultation and goal setting",
-        "Audience research and targeting setup",
-        "Creative development and approval",
-        "Campaign launch and monitoring",
-        "Performance optimization",
-        "Regular reporting and strategy updates"
-      ],
-      benefits: [
-        "Increased brand awareness",
-        "Higher engagement rates",
-        "Better ROI on ad spend",
-        "Detailed audience insights",
-        "Improved targeting accuracy",
-        "Consistent brand messaging"
-      ]
-    },
-    // ... Add similar detailed information for other services
-  };
-
-  const serviceDetails = additionalFeatures[service.name as keyof typeof additionalFeatures] || {
-    whatWeOffer: service.features,
-    process: ["Initial consultation", "Strategy development", "Implementation", "Monitoring and optimization", "Regular reporting"],
-    benefits: ["Improved performance", "Better ROI", "Expert guidance", "Time savings", "Professional results"]
-  };
+  const details = serviceDetail[service.name as keyof typeof serviceDetail];
 
   return (
     <main className="min-h-screen bg-black text-white font-geist">
@@ -80,8 +209,8 @@ export default function SubServiceDetail() {
           Back to {category.title}
         </motion.button>
 
-        {/* Service Header */}
-        <div className="max-w-4xl mx-auto">
+        {/* Hero Section */}
+        <div className="max-w-4xl mx-auto mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,101 +220,182 @@ export default function SubServiceDetail() {
             <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-white/10 text-sm font-medium text-white inline-block mb-6">
               {category.title}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
-                {service.name}
+                {details?.hero.title || service.name}
               </span>
             </h1>
-            <p className="text-xl text-gray-400">{service.description}</p>
+            <p className="text-xl text-gray-400 mb-8">
+              {details?.hero.description || service.description}
+            </p>
+            {details?.hero.platforms && (
+              <div className="flex flex-wrap justify-center gap-4">
+                {details.hero.platforms.map((platform, idx) => (
+                  <span key={idx} className="px-4 py-2 rounded-full bg-white/5 text-sm font-medium text-white border border-white/10">
+                    {platform}
+                  </span>
+                ))}
+              </div>
+            )}
           </motion.div>
 
-          {/* Price Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-8 rounded-xl border border-white/10 mb-16 text-center"
-          >
-            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text mb-4">
-              {service.price}
-            </div>
-            <Button asChild size="lg" className="rounded-lg">
-              <Link to="/contact">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
+          {/* Pricing Cards */}
+          {details?.pricing && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="grid md:grid-cols-3 gap-8 mb-32"
+            >
+              {Object.entries(details.pricing).map(([tier, data], idx) => (
+                <div key={idx} className="relative group">
+                  <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative p-8 rounded-xl bg-black border border-white/10 h-full flex flex-col">
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-semibold mb-4 capitalize">{tier}</h3>
+                      <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text mb-6">
+                        {data.price}
+                      </div>
+                      <div className="space-y-4">
+                        {data.features.map((feature, featureIdx) => (
+                          <div key={featureIdx} className="flex items-start gap-3">
+                            <Check className="w-5 h-5 text-green-400 shrink-0 mt-1" />
+                            <span className="text-gray-300">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <Button 
+                      className="mt-auto w-full rounded-lg"
+                      asChild
+                    >
+                      <Link to="/contact">
+                        Get Started
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          )}
 
-          {/* Service Details */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* What We Offer */}
+          {/* Process Section */}
+          {details?.process && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="space-y-6"
+              className="mb-32"
             >
-              <h2 className="text-2xl font-semibold mb-6">What We Offer</h2>
-              <ul className="space-y-4">
-                {serviceDetails.whatWeOffer.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-400 mt-1" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
+              <h2 className="text-3xl font-bold mb-16 text-center">Our Process</h2>
+              <div className="space-y-16">
+                {details.process.map((phase, idx) => (
+                  <div key={idx} className="relative">
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="md:w-1/3">
+                        <h3 className="text-2xl font-semibold mb-4">{phase.title}</h3>
+                        <p className="text-gray-400">{phase.description}</p>
+                      </div>
+                      <div className="md:w-2/3 space-y-4">
+                        {phase.steps.map((step, stepIdx) => (
+                          <div key={stepIdx} className="flex items-start gap-3 bg-white/5 p-4 rounded-lg">
+                            <div className="h-6 w-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+                              {stepIdx + 1}
+                            </div>
+                            <span className="text-gray-300">{step}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
+          )}
 
-            {/* Our Process */}
+          {/* Benefits Section */}
+          {details?.benefits && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="space-y-6"
+              className="mb-32"
             >
-              <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
-              <ul className="space-y-4">
-                {serviceDetails.process.map((step, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="h-5 w-5 rounded-full bg-blue-400/20 text-blue-400 flex items-center justify-center flex-shrink-0 mt-1">
-                      {idx + 1}
-                    </div>
-                    <span className="text-gray-300">{step}</span>
-                  </li>
+              <h2 className="text-3xl font-bold mb-16 text-center">Benefits</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {details.benefits.map((benefit, idx) => (
+                  <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10">
+                    <benefit.icon className="w-8 h-8 text-purple-400 mb-4" />
+                    <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
+                    <p className="text-gray-400">{benefit.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
+          )}
 
-            {/* Benefits */}
+          {/* Case Studies Section */}
+          {details?.caseStudies && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="space-y-6"
+              className="mb-32"
             >
-              <h2 className="text-2xl font-semibold mb-6">Benefits</h2>
-              <ul className="space-y-4">
-                {serviceDetails.benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="h-2 w-2 rounded-full bg-purple-400 mt-2.5" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
+              <h2 className="text-3xl font-bold mb-16 text-center">Success Stories</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                {details.caseStudies.map((study, idx) => (
+                  <div key={idx} className="p-8 rounded-xl bg-white/5 border border-white/10">
+                    <h3 className="text-2xl font-semibold mb-6">{study.title}</h3>
+                    <div className="space-y-4 mb-6">
+                      {study.metrics.map((metric, metricIdx) => (
+                        <div key={metricIdx} className="flex items-center gap-3">
+                          <BarChart3 className="w-5 h-5 text-green-400" />
+                          <span className="text-gray-300">{metric}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-gray-400">{study.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
-          </div>
+          )}
+
+          {/* FAQ Section */}
+          {details?.faq && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mb-32"
+            >
+              <h2 className="text-3xl font-bold mb-16 text-center">Frequently Asked Questions</h2>
+              <div className="space-y-8">
+                {details.faq.map((item, idx) => (
+                  <div key={idx} className="p-8 rounded-xl bg-white/5 border border-white/10">
+                    <h3 className="text-xl font-semibold mb-4 flex items-start gap-3">
+                      <AlertCircle className="w-6 h-6 text-purple-400 shrink-0" />
+                      {item.question}
+                    </h3>
+                    <p className="text-gray-400">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-center bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-8 rounded-xl border border-white/10"
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="text-center bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-12 rounded-xl border border-white/10"
           >
-            <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-400 mb-6">
-              Contact us today to learn more about how we can help your business grow
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              Transform your business with our expert {service.name} services. Contact us today to discuss your project and see how we can help you achieve your goals.
             </p>
             <Button asChild size="lg" className="rounded-lg">
               <Link to="/contact">
