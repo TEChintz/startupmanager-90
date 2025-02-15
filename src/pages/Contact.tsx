@@ -4,6 +4,7 @@ import { AppointmentSection } from "@/components/AppointmentSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { motion } from "framer-motion";
+import { Separator } from "./ui/separator";
 
 const Contact = () => {
   return (
@@ -12,8 +13,8 @@ const Contact = () => {
       <div className="pt-16">
         <div className="relative">
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/30 blur-[100px]" />
-            <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/30 blur-[100px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/10 blur-[100px]" />
+            <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[100px]" />
           </div>
           
           {/* Message Section */}
@@ -25,7 +26,7 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
                 className="text-center mb-12"
               >
-                <span className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full inline-block border border-white/10 mb-4">
+                <span className="px-4 py-2 text-sm font-medium bg-white/5 rounded-full inline-block border border-white/10 mb-4">
                   Contact Us
                 </span>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -41,19 +42,30 @@ const Contact = () => {
             </div>
           </section>
 
-          {/* Appointment Section */}
-          <section className="relative py-20 bg-white/[0.02]">
-            <div className="absolute inset-0">
-              <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/30 blur-[100px]" />
-            </div>
+          {/* OR Divider */}
+          <div className="relative py-8">
             <div className="container max-w-4xl mx-auto px-4">
+              <div className="flex items-center justify-center gap-4">
+                <Separator className="w-24 bg-white/10" />
+                <span className="text-white/50 text-sm font-medium px-4">OR</span>
+                <Separator className="w-24 bg-white/10" />
+              </div>
+            </div>
+          </div>
+
+          {/* Appointment Section */}
+          <section className="relative py-20 bg-black">
+            <div className="absolute inset-0">
+              <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/10 blur-[100px]" />
+            </div>
+            <div className="container max-w-5xl mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-center mb-12"
               >
-                <span className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full inline-block border border-white/10 mb-4">
+                <span className="px-4 py-2 text-sm font-medium bg-white/5 rounded-full inline-block border border-white/10 mb-4">
                   Schedule Meeting
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
