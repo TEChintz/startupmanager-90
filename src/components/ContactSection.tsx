@@ -27,73 +27,55 @@ export const ContactSection = () => {
   };
 
   return (
-    <div className="py-20 bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2071&auto=format&fit=crop')] opacity-5 blur-2xl mix-blend-luminosity" />
-      <div className="container max-w-4xl relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center space-y-4 mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold relative">
-            <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl" />
-            <span className="relative bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
-              Get In Touch
-            </span>
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-          </p>
-        </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="space-y-6 p-8 rounded-xl bg-white/5 border border-white/10"
+    >
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold">Send us a Message</h2>
+        <p className="text-gray-400">We'll get back to you as soon as possible</p>
+      </div>
 
-        <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
-          <div className="grid md:grid-cols-2 gap-6">
-            <Input
-              name="name"
-              required
-              placeholder="Name"
-              className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
-            />
-            <Input
-              name="email"
-              type="email"
-              required
-              placeholder="Email"
-              className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
-            />
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Input
-            name="subject"
+            name="name"
             required
-            placeholder="Subject"
+            placeholder="Name"
             className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
           />
-          <Textarea
-            name="message"
+          <Input
+            name="email"
+            type="email"
             required
-            placeholder="Your message"
-            className="min-h-[150px] rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+            placeholder="Email"
+            className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
           />
-          <Button
-            type="submit"
-            size="lg"
-            disabled={isSubmitting}
-            variant="default"
-            className="w-full"
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </Button>
-        </motion.form>
-      </div>
-    </div>
+        </div>
+        <Input
+          name="subject"
+          required
+          placeholder="Subject"
+          className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+        />
+        <Textarea
+          name="message"
+          required
+          placeholder="Your message"
+          className="min-h-[150px] rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+        />
+        <Button
+          type="submit"
+          size="lg"
+          disabled={isSubmitting}
+          variant="default"
+          className="w-full"
+        >
+          {isSubmitting ? "Sending..." : "Send Message"}
+        </Button>
+      </form>
+    </motion.div>
   );
 };
