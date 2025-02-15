@@ -87,11 +87,10 @@ export const ContactSection = () => {
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="w-full rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition-opacity"
+            variant="default"
+            className="w-full"
           >
-            <span className="text-white">
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </span>
+            {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </motion.form>
       </div>
