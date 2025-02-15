@@ -13,8 +13,8 @@ const Contact = () => {
       <div className="pt-16">
         <div className="relative">
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/10 blur-[100px]" />
-            <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[100px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/5 blur-[100px]" />
+            <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/5 blur-[100px]" />
           </div>
           
           {/* Message Section */}
@@ -56,7 +56,7 @@ const Contact = () => {
           {/* Appointment Section */}
           <section className="relative py-20 bg-black">
             <div className="absolute inset-0">
-              <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/10 blur-[100px]" />
+              <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/5 blur-[100px]" />
             </div>
             <div className="container max-w-5xl mx-auto px-4">
               <motion.div
