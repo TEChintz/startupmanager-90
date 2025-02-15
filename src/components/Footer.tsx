@@ -1,72 +1,99 @@
+
 import { Github, Mail, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 import { AuroraBackground } from "./ui/aurora-background";
+import { motion } from "framer-motion";
+
 export const Footer = () => {
-  return <footer className="w-full relative py-12">
+  return (
+    <footer className="w-full relative py-16">
       <AuroraBackground className="absolute inset-0 !h-full" showRadialGradient={false}>
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 to-black/95" />
       </AuroraBackground>
       
       <div className="relative">
-        <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-          <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">StartUp Manager</h4>
-            <nav className="flex flex-col space-y-3">
-              <a href="/about" className="text-purple-100 hover:text-purple-300 transition-colors">About Us</a>
-              <a href="/services" className="text-purple-100 hover:text-purple-300 transition-colors">Services</a>
-              <a href="/careers" className="text-purple-100 hover:text-purple-300 transition-colors">Careers</a>
-            </nav>
-          </div>
+        <div className="container grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-4"
+          >
+            <h4 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">StartUp Manager</h4>
+            <p className="text-gray-400 leading-relaxed">
+              Transforming ideas into successful businesses through innovative solutions and strategic guidance.
+            </p>
+          </motion.div>
 
-          <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
-              Resources
-            </h4>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-4"
+          >
+            <h4 className="text-xl font-semibold text-white">Resources</h4>
             <nav className="flex flex-col space-y-3">
-              <a href="/blog" className="text-purple-100 hover:text-purple-300 transition-colors">Blog</a>
-              <a href="/docs" className="text-purple-100 hover:text-purple-300 transition-colors">Documentation</a>
-              <a href="/help" className="text-purple-100 hover:text-purple-300 transition-colors">Help Center</a>
+              <a href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</a>
+              <a href="/docs" className="text-gray-400 hover:text-white transition-colors">Documentation</a>
+              <a href="/help" className="text-gray-400 hover:text-white transition-colors">Help Center</a>
             </nav>
-          </div>
+          </motion.div>
 
-          <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
-              Legal
-            </h4>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-4"
+          >
+            <h4 className="text-xl font-semibold text-white">Legal</h4>
             <nav className="flex flex-col space-y-3">
-              <a href="/privacy" className="text-purple-100 hover:text-purple-300 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="text-purple-100 hover:text-purple-300 transition-colors">Terms of Service</a>
-              <a href="/cookies" className="text-purple-100 hover:text-purple-300 transition-colors">Cookie Policy</a>
+              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
             </nav>
-          </div>
+          </motion.div>
 
-          <div className="space-y-3">
-            <h4 className="text-xl font-bold bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 text-white">
-              Connect
-            </h4>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="space-y-4"
+          >
+            <h4 className="text-xl font-semibold text-white">Connect</h4>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="hover:bg-purple-800/50 transition-colors">
-                <Twitter className="h-5 w-5 text-purple-200" />
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10">
+                <Twitter className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-purple-800/50 transition-colors">
-                <Github className="h-5 w-5 text-purple-200" />
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10">
+                <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-purple-800/50 transition-colors">
-                <Mail className="h-5 w-5 text-purple-200" />
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10">
+                <Mail className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </Button>
             </div>
-            <p className="text-sm text-white">
-              Contact us at: hello@startupmanager.com
+            <p className="text-sm text-gray-400">
+              Contact us at: <a href="mailto:hello@startupmanager.com" className="hover:text-white transition-colors">hello@startupmanager.com</a>
             </p>
-          </div>
+          </motion.div>
         </div>
         
-        <div className="container mt-8 pt-8 px-8 max-w-7xl mx-auto border-t border-purple-500/20">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="container mt-12 pt-8 px-8 max-w-7xl mx-auto border-t border-white/10"
+        >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-white">© 2025 StartUp Manager. All rights reserved.</p>
-            <p className="text-sm mt-4 md:mt-0 text-white">Made with ❤️ by StartUp Manager Team</p>
+            <p className="text-sm text-gray-400">© 2025 StartUp Manager. All rights reserved.</p>
+            <p className="text-sm mt-4 md:mt-0 text-gray-400">Made with ❤️ by StartUp Manager Team</p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </footer>;
+    </footer>
+  );
 };

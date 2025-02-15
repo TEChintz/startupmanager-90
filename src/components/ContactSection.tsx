@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -88,10 +87,9 @@ export const ContactSection = () => {
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="w-full rounded-lg group relative overflow-hidden"
+            className="w-full rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition-opacity"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-teal-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur" />
-            <span className="relative group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 transition-all duration-300">
+            <span className="text-white">
               {isSubmitting ? "Sending..." : "Send Message"}
             </span>
           </Button>
