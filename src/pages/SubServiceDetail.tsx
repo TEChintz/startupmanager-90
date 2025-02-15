@@ -1,4 +1,3 @@
-
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Package, ArrowRight, Check, Clock, Target, BarChart3, Shield, Users, PieChart, Rocket, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -167,8 +166,336 @@ const serviceDetail = {
         description: "Assisted a local business in expanding their customer base through location-based targeting and custom audience creation."
       }
     ]
+  },
+  "Google Ads - Search & Display": {
+    hero: {
+      title: "Google Ads Search & Display Marketing",
+      description: "Drive targeted traffic and increase conversions with our comprehensive Google Ads management service. We specialize in both Search and Display campaigns to maximize your reach and ROI.",
+      platforms: ["Google Search", "Google Display Network", "Google Shopping", "YouTube Ads", "Gmail Ads"]
+    },
+    pricing: {
+      starter: {
+        price: "$599/month",
+        features: [
+          "Campaign setup and optimization",
+          "Keyword research and targeting",
+          "Ad copy creation (2 versions)",
+          "Monthly performance reports",
+          "Basic conversion tracking",
+          "Regular bid adjustments"
+        ]
+      },
+      professional: {
+        price: "$1,199/month",
+        features: [
+          "Advanced campaign management",
+          "Extensive keyword research",
+          "Ad copy creation (4 versions)",
+          "Bi-weekly performance reports",
+          "Advanced conversion tracking",
+          "Competitor analysis",
+          "Landing page recommendations",
+          "A/B testing",
+          "Remarketing campaigns"
+        ]
+      },
+      enterprise: {
+        price: "$2,499/month",
+        features: [
+          "Full-service campaign management",
+          "Comprehensive keyword strategy",
+          "Unlimited ad variations",
+          "Weekly performance reports",
+          "Custom conversion tracking",
+          "In-depth competitor analysis",
+          "Landing page optimization",
+          "Dynamic remarketing",
+          "Script automation",
+          "Dedicated account manager"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Account Analysis & Strategy",
+        description: "We begin with a comprehensive analysis of your existing account or create a new strategy from scratch.",
+        steps: [
+          "Historical performance review",
+          "Competitor landscape analysis",
+          "Keyword opportunity identification",
+          "Budget planning",
+          "Campaign structure development"
+        ]
+      },
+      {
+        title: "Campaign Development",
+        description: "Our team builds highly-targeted campaigns designed to reach your ideal customers.",
+        steps: [
+          "Keyword research and selection",
+          "Ad group structuring",
+          "Ad copy creation",
+          "Extension setup",
+          "Landing page alignment"
+        ]
+      },
+      {
+        title: "Performance Optimization",
+        description: "Continuous optimization to improve campaign performance and ROI.",
+        steps: [
+          "Bid management",
+          "Quality score improvement",
+          "Search term analysis",
+          "Negative keyword refinement",
+          "Ad schedule optimization"
+        ]
+      },
+      {
+        title: "Tracking & Reporting",
+        description: "Comprehensive tracking and reporting to measure success and identify opportunities.",
+        steps: [
+          "Conversion tracking setup",
+          "Custom report creation",
+          "Performance analysis",
+          "ROI calculation",
+          "Strategy adjustments"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Immediate Results",
+        description: "Start generating leads and sales as soon as your campaigns go live with instant visibility on Google.",
+        icon: Rocket
+      },
+      {
+        title: "Precise Targeting",
+        description: "Reach customers actively searching for your products or services with intent-based targeting.",
+        icon: Target
+      },
+      {
+        title: "Measurable ROI",
+        description: "Track every click, conversion, and dollar spent with comprehensive analytics and reporting.",
+        icon: PieChart
+      },
+      {
+        title: "Market Insights",
+        description: "Gain valuable insights about your market, competitors, and customer behavior.",
+        icon: BarChart3
+      },
+      {
+        title: "Brand Protection",
+        description: "Maintain brand safety with carefully monitored placements and negative keyword management.",
+        icon: Shield
+      },
+      {
+        title: "Scalable Growth",
+        description: "Easily scale your campaigns as your business grows and new opportunities arise.",
+        icon: Users
+      }
+    ],
+    faq: [
+      {
+        question: "How long does it take to see results from Google Ads?",
+        answer: "Results can be seen immediately after campaigns go live, but optimization typically takes 2-3 months to achieve optimal performance. Initial results vary based on factors like competition, budget, and industry."
+      },
+      {
+        question: "What budget should I allocate for Google Ads?",
+        answer: "We recommend a minimum ad spend of $1,000/month for search campaigns and $1,500/month for combined search and display campaigns. The ideal budget depends on your industry, competition, and business goals."
+      },
+      {
+        question: "How do you track campaign success?",
+        answer: "We track multiple metrics including clicks, impressions, CTR, conversion rate, cost per conversion, and ROAS. We set up comprehensive conversion tracking and provide regular reports with detailed analytics."
+      },
+      {
+        question: "Do you offer landing page optimization?",
+        answer: "Yes, our professional and enterprise plans include landing page recommendations and optimization to improve conversion rates and campaign performance."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "B2B Software Company",
+        metrics: [
+          "450% increase in qualified leads",
+          "65% reduction in cost per acquisition",
+          "89% improvement in conversion rate"
+        ],
+        description: "Transformed a struggling Google Ads account into a lead generation powerhouse through strategic keyword targeting and landing page optimization."
+      },
+      {
+        title: "E-commerce Growth",
+        metrics: [
+          "280% increase in ROAS",
+          "42% reduction in CPC",
+          "3.5x increase in conversion value"
+        ],
+        description: "Helped an e-commerce client scale their Google Shopping and Search campaigns to achieve record-breaking sales."
+      }
+    ]
+  },
+  "SEO - Search Engine Optimization": {
+    hero: {
+      title: "Search Engine Optimization",
+      description: "Boost your organic search visibility and drive sustainable traffic growth with our comprehensive SEO services. We combine technical expertise with content strategy to improve your search rankings.",
+      platforms: ["Google", "Bing", "Local Search", "Mobile Search", "Voice Search"]
+    },
+    pricing: {
+      starter: {
+        price: "$799/month",
+        features: [
+          "Technical SEO audit",
+          "Keyword research",
+          "On-page optimization",
+          "Monthly reporting",
+          "Basic link building",
+          "Content recommendations"
+        ]
+      },
+      professional: {
+        price: "$1,499/month",
+        features: [
+          "Advanced technical SEO",
+          "Comprehensive keyword strategy",
+          "Content creation & optimization",
+          "Link building campaign",
+          "Local SEO optimization",
+          "Competitor analysis",
+          "Schema markup implementation",
+          "Mobile optimization",
+          "Weekly reporting"
+        ]
+      },
+      enterprise: {
+        price: "$2,999/month",
+        features: [
+          "Enterprise-level SEO strategy",
+          "Custom content creation",
+          "Advanced link building",
+          "International SEO",
+          "E-commerce optimization",
+          "CRO implementation",
+          "Technical consulting",
+          "Priority support",
+          "Custom reporting dashboard"
+        ]
+      }
+    },
+    process: [
+      {
+        title: "Technical Audit & Strategy",
+        description: "Comprehensive analysis of your website's technical health and SEO potential.",
+        steps: [
+          "Site structure analysis",
+          "Technical SEO audit",
+          "Competitor research",
+          "Keyword opportunity analysis",
+          "Strategy development"
+        ]
+      },
+      {
+        title: "On-Page Optimization",
+        description: "Optimize your website's content and structure for better search visibility.",
+        steps: [
+          "Content optimization",
+          "Meta data enhancement",
+          "Internal linking strategy",
+          "Schema markup implementation",
+          "Site speed optimization"
+        ]
+      },
+      {
+        title: "Content Development",
+        description: "Create and optimize content that ranks and converts.",
+        steps: [
+          "Content gap analysis",
+          "Topic research",
+          "Content creation",
+          "Existing content optimization",
+          "Content promotion"
+        ]
+      },
+      {
+        title: "Off-Page SEO",
+        description: "Build authority and improve rankings through off-page techniques.",
+        steps: [
+          "Link building strategy",
+          "Digital PR",
+          "Social signals",
+          "Brand mentions",
+          "Local citation building"
+        ]
+      }
+    ],
+    benefits: [
+      {
+        title: "Sustainable Growth",
+        description: "Build long-term organic traffic that continues to grow over time.",
+        icon: Rocket
+      },
+      {
+        title: "Higher ROI",
+        description: "Generate consistent organic traffic without paying for each click.",
+        icon: PieChart
+      },
+      {
+        title: "Brand Authority",
+        description: "Establish your brand as an authority in your industry.",
+        icon: Shield
+      },
+      {
+        title: "Better User Experience",
+        description: "Improve your website's usability and conversion potential.",
+        icon: Users
+      },
+      {
+        title: "Competitive Edge",
+        description: "Stay ahead of competitors in search results.",
+        icon: Target
+      },
+      {
+        title: "Data-Driven Results",
+        description: "Make informed decisions based on comprehensive analytics.",
+        icon: BarChart3
+      }
+    ],
+    faq: [
+      {
+        question: "How long does it take to see results from SEO?",
+        answer: "SEO is a long-term strategy, typically taking 4-6 months to see significant results. However, some improvements can be seen within the first few months of implementation."
+      },
+      {
+        question: "Do you guarantee first page rankings?",
+        answer: "We don't guarantee specific rankings as search engines constantly update their algorithms. However, we follow best practices and have a proven track record of improving search visibility."
+      },
+      {
+        question: "What types of reporting do you provide?",
+        answer: "We provide detailed monthly reports including rankings, organic traffic, conversions, and technical improvements. Our enterprise clients receive custom dashboards with real-time data."
+      },
+      {
+        question: "Do you follow Google's guidelines?",
+        answer: "Yes, we strictly adhere to Google's webmaster guidelines and employ only white-hat SEO techniques to ensure sustainable, long-term results."
+      }
+    ],
+    caseStudies: [
+      {
+        title: "Healthcare Provider",
+        metrics: [
+          "325% increase in organic traffic",
+          "185% increase in leads",
+          "Top 3 rankings for 50+ keywords"
+        ],
+        description: "Transformed the online presence of a healthcare provider through comprehensive SEO strategy and content optimization."
+      },
+      {
+        title: "E-commerce Success",
+        metrics: [
+          "450% increase in organic revenue",
+          "200+ first page rankings",
+          "68% increase in conversion rate"
+        ],
+        description: "Helped an e-commerce site achieve record organic traffic and sales through technical SEO and content optimization."
+      }
+    ]
   }
-  // Add similar detailed information for other services
 };
 
 export default function SubServiceDetail() {
