@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Building2, Users, Globe, ArrowRight } from "lucide-react";
@@ -6,10 +5,8 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  return (
-    <main className="min-h-screen bg-black text-white font-geist">
+  return <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       <div className="pt-16 relative overflow-hidden">
         {/* Background effects */}
@@ -22,18 +19,21 @@ const About = () => {
         
         <div className="container relative py-20">
           <div className="max-w-4xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-center space-y-4"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }} className="text-center space-y-4">
               <span className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-white inline-block border border-white/10">
                 About Us
               </span>
               <h1 className="text-4xl md:text-6xl font-bold relative">
                 <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl" />
-                <span className="relative">
+                <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
                   Transforming <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">Ideas</span> Into Reality
                 </span>
               </h1>
@@ -44,13 +44,17 @@ const About = () => {
             
             <div className="space-y-32 mt-32">
               {/* Mission Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="relative group"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.5
+            }} className="relative group">
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative p-12 rounded-3xl bg-[#222222] border border-white/20 hover:border-white/30 transition-all">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
@@ -66,53 +70,56 @@ const About = () => {
 
               {/* Team Section */}
               <div className="space-y-12">
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="text-3xl md:text-4xl font-semibold text-center mb-16"
-                >
+                <motion.h2 initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                duration: 0.5
+              }} className="text-3xl md:text-4xl font-semibold text-center mb-16">
                   <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text">
                     Meet Our Team
                   </span>
                 </motion.h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                  {[
-                    {
-                      name: "Deepam Modi",
-                      role: "Lead Developer",
-                      description: "Technical architect with expertise in scalable solutions.",
-                      initials: "DM"
-                    },
-                    {
-                      name: "Abhishek Chavan",
-                      role: "Creative Director",
-                      description: "Strategy lead focusing on comprehensive digital solutions.",
-                      initials: "AC"
-                    },
-                    {
-                      name: "Rohit Kumar",
-                      role: "Business Manager",
-                      description: "Specializing in strategic partnerships and growth.",
-                      initials: "RK"
-                    }
-                  ].map((member, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="group relative"
-                    >
+                  {[{
+                  name: "Deepam Modi",
+                  role: "Lead Developer",
+                  description: "Technical architect with expertise in scalable solutions.",
+                  initials: "DM"
+                }, {
+                  name: "Abhishek Chavan",
+                  role: "Creative Director",
+                  description: "Strategy lead focusing on comprehensive digital solutions.",
+                  initials: "AC"
+                }, {
+                  name: "Rohit Kumar",
+                  role: "Business Manager",
+                  description: "Specializing in strategic partnerships and growth.",
+                  initials: "RK"
+                }].map((member, index) => <motion.div key={index} initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} viewport={{
+                  once: true
+                }} transition={{
+                  duration: 0.5,
+                  delay: index * 0.1
+                }} className="group relative">
                       <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative p-8 rounded-xl bg-[#222222] border border-white/20 hover:border-white/30 transition-all text-center">
                         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
                         <div className="relative">
                           <Avatar className="w-24 h-24 mx-auto mb-6 border-2 border-purple-500/20">
-                            <AvatarFallback className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 text-xl">
+                            <AvatarFallback className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 text-xl text-black">
                               {member.initials}
                             </AvatarFallback>
                           </Avatar>
@@ -123,20 +130,23 @@ const About = () => {
                           <p className="text-gray-400">{member.description}</p>
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
               </div>
 
               {/* Values Section */}
               <div className="grid md:grid-cols-2 gap-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="group relative"
-                >
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                duration: 0.5
+              }} className="group relative">
                   <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative p-8 rounded-xl bg-[#222222] border border-white/20 hover:border-white/30 transition-all h-full">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
@@ -160,13 +170,17 @@ const About = () => {
                   </div>
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="group relative"
-                >
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                duration: 0.5
+              }} className="group relative">
                   <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative p-8 rounded-xl bg-[#222222] border border-white/20 hover:border-white/30 transition-all h-full">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
@@ -191,8 +205,6 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default About;
