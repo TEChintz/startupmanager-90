@@ -1,3 +1,4 @@
+<lov-code>
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Package, ArrowRight, Check, Clock, Target, BarChart3, Shield, Users, PieChart, Rocket, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -986,246 +987,46 @@ const serviceDetail = {
         description: "Developed a full-featured real estate management system with property listing, tenant management, and payment processing."
       }
     ]
-  }
-};
-
-export default function SubServiceDetail() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { service, category } = location.state || {};
-
-  if (!service || !category) {
-    return (
-      <div className="min-h-screen bg-black text-white">
-        <Header />
-        <div className="container py-20 text-center">
-          <h1 className="text-2xl mb-4">Service not found</h1>
-          <Button asChild variant="outline">
-            <Link to="/services">Back to Services</Link>
-          </Button>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  const details = serviceDetail[service.name as keyof typeof serviceDetail];
-
-  return (
-    <main className="min-h-screen bg-black text-white font-geist">
-      <Header />
-      
-      <div className="container py-20">
-        {/* Back Button */}
-        <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2 text-gray-400 hover:text-white mb-8 group"
-          onClick={() => navigate(-1)}
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          Back to {category.title}
-        </motion.button>
-
-        {/* Hero Section */}
-        <div className="max-w-4xl mx-auto mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-white/10 text-sm font-medium text-white inline-block mb-6">
-              {category.title}
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
-                {details?.hero.title || service.name}
-              </span>
-            </h1>
-            <p className="text-xl text-gray-400 mb-8">
-              {details?.hero.description || service.description}
-            </p>
-            {details?.hero.platforms && (
-              <div className="flex flex-wrap justify-center gap-4">
-                {details.hero.platforms.map((platform, idx) => (
-                  <span key={idx} className="px-4 py-2 rounded-full bg-white/5 text-sm font-medium text-white border border-white/10">
-                    {platform}
-                  </span>
-                ))}
-              </div>
-            )}
-          </motion.div>
-
-          {/* Pricing Cards */}
-          {details?.pricing && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="grid md:grid-cols-3 gap-8 mb-32"
-            >
-              {Object.entries(details.pricing).map(([tier, data], idx) => (
-                <div key={idx} className="relative group">
-                  <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative p-8 rounded-xl bg-black border border-white/10 h-full flex flex-col">
-                    <div className="mb-8">
-                      <h3 className="text-2xl font-semibold mb-4 capitalize">{tier}</h3>
-                      <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text mb-6">
-                        {data.price}
-                      </div>
-                      <div className="space-y-4">
-                        {data.features.map((feature, featureIdx) => (
-                          <div key={featureIdx} className="flex items-start gap-3">
-                            <Check className="w-5 h-5 text-green-400 shrink-0 mt-1" />
-                            <span className="text-gray-300">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <Button 
-                      className="mt-auto w-full rounded-lg"
-                      asChild
-                    >
-                      <Link to="/contact">
-                        Get Started
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          )}
-
-          {/* Process Section */}
-          {details?.process && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mb-32"
-            >
-              <h2 className="text-3xl font-bold mb-16 text-center">Our Process</h2>
-              <div className="space-y-16">
-                {details.process.map((phase, idx) => (
-                  <div key={idx} className="relative">
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
-                      <div className="md:w-1/3">
-                        <h3 className="text-2xl font-semibold mb-4">{phase.title}</h3>
-                        <p className="text-gray-400">{phase.description}</p>
-                      </div>
-                      <div className="md:w-2/3 space-y-4">
-                        {phase.steps.map((step, stepIdx) => (
-                          <div key={stepIdx} className="flex items-start gap-3 bg-white/5 p-4 rounded-lg">
-                            <div className="h-6 w-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center flex-shrink-0">
-                              {stepIdx + 1}
-                            </div>
-                            <span className="text-gray-300">{step}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Benefits Section */}
-          {details?.benefits && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-32"
-            >
-              <h2 className="text-3xl font-bold mb-16 text-center">Benefits</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {details.benefits.map((benefit, idx) => (
-                  <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10">
-                    <benefit.icon className="w-8 h-8 text-purple-400 mb-4" />
-                    <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
-                    <p className="text-gray-400">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Case Studies Section */}
-          {details?.caseStudies && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mb-32"
-            >
-              <h2 className="text-3xl font-bold mb-16 text-center">Success Stories</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {details.caseStudies.map((study, idx) => (
-                  <div key={idx} className="p-8 rounded-xl bg-white/5 border border-white/10">
-                    <h3 className="text-2xl font-semibold mb-6">{study.title}</h3>
-                    <div className="space-y-4 mb-6">
-                      {study.metrics.map((metric, metricIdx) => (
-                        <div key={metricIdx} className="flex items-center gap-3">
-                          <BarChart3 className="w-5 h-5 text-green-400" />
-                          <span className="text-gray-300">{metric}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-gray-400">{study.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* FAQ Section */}
-          {details?.faq && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="mb-32"
-            >
-              <h2 className="text-3xl font-bold mb-16 text-center">Frequently Asked Questions</h2>
-              <div className="space-y-8">
-                {details.faq.map((item, idx) => (
-                  <div key={idx} className="p-8 rounded-xl bg-white/5 border border-white/10">
-                    <h3 className="text-xl font-semibold mb-4 flex items-start gap-3">
-                      <AlertCircle className="w-6 h-6 text-purple-400 shrink-0" />
-                      {item.question}
-                    </h3>
-                    <p className="text-gray-400">{item.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-center bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-12 rounded-xl border border-white/10"
-          >
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Transform your business with our expert {service.name} services. Contact us today to discuss your project and see how we can help you achieve your goals.
-            </p>
-            <Button asChild size="lg" className="rounded-lg">
-              <Link to="/contact">
-                Contact Us
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </div>
-
-      <Footer />
-    </main>
-  );
-}
+  },
+  "Wix Development": {
+    hero: {
+      title: "Professional Wix Development Services",
+      description: "Transform your Wix website into a powerful business tool with our expert Wix development services. We combine Wix's intuitive platform with custom solutions to create unique, high-performing websites.",
+      platforms: ["Wix", "Velo by Wix", "Wix Apps", "Custom Integrations", "Mobile Optimization"]
+    },
+    pricing: {
+      starter: {
+        price: "$999/project",
+        features: [
+          "Custom Wix design implementation",
+          "Mobile responsiveness",
+          "Basic animations",
+          "Contact forms setup",
+          "Social media integration",
+          "Basic SEO setup",
+          "2 rounds of revisions"
+        ]
+      },
+      professional: {
+        price: "$2,499/project",
+        features: [
+          "Advanced Wix customization",
+          "Custom animations",
+          "Dynamic pages",
+          "Database collections",
+          "E-commerce setup",
+          "Advanced SEO optimization",
+          "Custom forms & workflows",
+          "Payment integration",
+          "4 rounds of revisions"
+        ]
+      },
+      enterprise: {
+        price: "Custom Quote",
+        features: [
+          "Complex Wix applications",
+          "Custom Velo development",
+          "Advanced integrations",
+          "Custom API development",
+          "Multiple language support",
+          "Advanced e-commerce features",
