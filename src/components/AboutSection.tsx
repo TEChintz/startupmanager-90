@@ -8,6 +8,11 @@ export const AboutSection = () => {
   return (
     <section className="py-20 bg-black text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2071&auto=format&fit=crop')] opacity-5 blur-2xl mix-blend-luminosity" />
+      <div className="absolute -inset-[10px] opacity-50">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/30 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/30 blur-[100px]" />
+        <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/30 blur-[100px]" />
+      </div>
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.span
@@ -43,7 +48,7 @@ export const AboutSection = () => {
             A passionate team dedicated to transforming visions into reality
           </motion.p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 bg-black">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[{
               icon: <Building2 className="w-12 h-12 mx-auto mb-4 text-purple-300" />,
               title: "Our Story",
