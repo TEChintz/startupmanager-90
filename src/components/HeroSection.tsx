@@ -4,24 +4,9 @@ import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const GlowingBackground = () => {
-  return (
-    <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute -inset-[10px] opacity-50">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/30 blur-[100px]" />
-        <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/30 blur-[100px]" />
-        <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/30 blur-[100px]" />
-      </div>
-    </div>
-  );
-};
-
 export const HeroSection = () => {
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
-      <GlowingBackground />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2071&auto=format&fit=crop')] opacity-5 blur-2xl mix-blend-luminosity" />
-      
+    <div className="min-h-screen bg-black relative">
       <div className="space-y-8 text-center max-w-4xl mx-auto pt-32 pb-20 relative">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +23,6 @@ export const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-5xl md:text-7xl font-poppins font-semibold tracking-tight relative"
         >
-          <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl" />
           <span className="relative bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
             Your Startup Manager
           </span>

@@ -5,18 +5,11 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const About = () => {
   return <main className="min-h-screen bg-black text-white font-geist">
       <Header />
-      <div className="pt-16 relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/30 blur-[100px]" />
-          <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/30 blur-[100px]" />
-          <div className="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-teal-500/30 blur-[100px]" />
-        </div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2071&auto=format&fit=crop')] opacity-5 blur-2xl mix-blend-luminosity" />
-        
+      <div className="pt-16 relative">        
         <div className="container relative py-20">
           <div className="max-w-4xl mx-auto">
             <motion.div initial={{
@@ -32,7 +25,6 @@ const About = () => {
                 About Us
               </span>
               <h1 className="text-4xl md:text-6xl font-bold relative">
-                <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl" />
                 <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
                   Transforming <span className="bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">Ideas</span> Into Reality
                 </span>
@@ -43,7 +35,6 @@ const About = () => {
             </motion.div>
             
             <div className="space-y-32 mt-32">
-              {/* Mission Section */}
               <motion.div initial={{
               opacity: 0,
               y: 20
@@ -68,7 +59,6 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Team Section */}
               <div className="space-y-12">
                 <motion.h2 initial={{
                 opacity: 0,
@@ -134,7 +124,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Values Section */}
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div initial={{
                 opacity: 0,
@@ -207,4 +196,5 @@ const About = () => {
       <Footer />
     </main>;
 };
+
 export default About;

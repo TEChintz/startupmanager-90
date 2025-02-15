@@ -319,7 +319,7 @@ const ServiceCard = ({ category }: { category: typeof serviceCategories[0] }) =>
   );
 };
 
-const Services = () => {
+export const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -329,9 +329,7 @@ const Services = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   
   return (
-    <main className="min-h-screen bg-black text-white font-geist relative overflow-hidden">
-      <GlowingBackground />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2071&auto=format&fit=crop')] opacity-5 blur-2xl mix-blend-luminosity" />
+    <main className="min-h-screen bg-black text-white font-geist">
       <Header />
       
       <div className="container py-20 relative" ref={containerRef}>
@@ -345,7 +343,6 @@ const Services = () => {
             Transform Your Business
           </span>
           <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 relative">
-            <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl" />
             <span className="relative bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#375CE1] text-transparent bg-clip-text animate-gradient">
               Our Services
             </span>
@@ -354,9 +351,7 @@ const Services = () => {
             Comprehensive solutions to help your startup grow and succeed in today's competitive market
           </p>
         </motion.div>
-      </div>
 
-      <div className="container pb-20 relative">
         <div className="grid md:grid-cols-2 gap-8">
           {serviceCategories.map((category, index) => (
             <ServiceCard key={index} category={category} />
