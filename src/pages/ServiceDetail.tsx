@@ -1,4 +1,3 @@
-
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Package, ArrowRight, Globe, Code, Building2, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -56,9 +55,15 @@ export default function ServiceDetail() {
     }
   };
 
+  const handleServiceClick = (service: any) => {
+    const serviceSlug = service.name.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}/${serviceSlug}`, {
+      state: { service, category }
+    });
+  };
+
   return (
     <main className="min-h-screen bg-black text-white font-geist relative overflow-hidden">
-      {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-[10px] opacity-50">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-purple-500/30 blur-[100px]" />
@@ -75,7 +80,6 @@ export default function ServiceDetail() {
       <Header />
 
       <div className="container py-20 relative">
-        {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -86,7 +90,6 @@ export default function ServiceDetail() {
           Back to Services
         </motion.button>
 
-        {/* Category Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -104,15 +107,15 @@ export default function ServiceDetail() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">{category.description}</p>
         </motion.div>
 
-        {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {category.services.map((service, idx) => (
+          {category.services.map((service: any, idx: number) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative"
+              className="group relative cursor-pointer"
+              onClick={() => handleServiceClick(service)}
             >
               <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-teal-500/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative p-6 rounded-xl bg-black border border-white/10 backdrop-blur-xl group-hover:border-white/20 transition-all h-full flex flex-col">
