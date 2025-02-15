@@ -77,12 +77,12 @@ export const AppointmentSection = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="text-sm text-white/70">Select Date:</div>
-                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden">
                   <Calendar
                     mode="single"
                     selected={date}
                     onSelect={setDate}
-                    className="rounded-md"
+                    className="[&_.rdp-months]:p-0 [&_.rdp-caption]:px-4 [&_.rdp-head_cell]:w-9 [&_.rdp-cell]:w-9 [&_.rdp-nav]:p-1"
                     classNames={{
                       months: "space-y-4",
                       month: "space-y-4",
@@ -94,15 +94,14 @@ export const AppointmentSection = () => {
                       nav_button_next: "absolute right-1",
                       table: "w-full border-collapse space-y-1",
                       head_row: "flex",
-                      head_cell: "text-white/50 rounded-md w-8 font-normal text-[0.8rem]",
+                      head_cell: "text-white/50 rounded-md w-9 font-normal text-[0.8rem]",
                       row: "flex w-full mt-2",
-                      cell: "text-center text-sm relative [&:has([aria-selected])]:bg-white/10 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 h-8 w-8 p-0 rounded-md",
-                      day: "h-8 w-8 p-0 font-normal text-white/70 hover:bg-white/10 rounded-md transition-colors aria-selected:opacity-100",
+                      cell: "text-center text-sm relative [&:has([aria-selected])]:bg-white/10 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 h-9 w-9 p-0 rounded-md",
+                      day: "h-9 w-9 p-0 font-normal text-white/70 hover:bg-white/10 rounded-md transition-colors aria-selected:opacity-100",
                       day_selected: "bg-white/20 text-white hover:bg-white/30 hover:text-white focus:bg-white/20 focus:text-white rounded-md",
                       day_today: "bg-white/10 text-white rounded-md",
-                      day_outside: "text-white/30 opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
+                      day_outside: "text-white/30 opacity-50",
                       day_disabled: "text-white/30 opacity-50",
-                      day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground",
                       day_hidden: "invisible",
                     }}
                     disabled={(date) => isBefore(date, startOfToday())}
@@ -165,3 +164,4 @@ export const AppointmentSection = () => {
     </motion.div>
   );
 };
+
