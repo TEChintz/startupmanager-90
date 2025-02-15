@@ -33,7 +33,7 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <div className="py-20 bg-black overflow-hidden">
+    <div className="py-20 bg-black">
       <div className="container">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
