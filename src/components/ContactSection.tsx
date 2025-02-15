@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -31,7 +32,7 @@ export const ContactSection = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="space-y-6 p-8 rounded-xl bg-white/5 border border-white/10"
+      className="space-y-6 p-8 rounded-xl bg-black border border-white/10"
     >
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">Send us a Message</h2>
@@ -44,27 +45,27 @@ export const ContactSection = () => {
             name="name"
             required
             placeholder="Name"
-            className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+            className="rounded-lg text-white border-white/20 bg-black/5 backdrop-blur-xl focus:border-white/30 transition-colors"
           />
           <Input
             name="email"
             type="email"
             required
             placeholder="Email"
-            className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+            className="rounded-lg text-white border-white/20 bg-black/5 backdrop-blur-xl focus:border-white/30 transition-colors"
           />
         </div>
         <Input
           name="subject"
           required
           placeholder="Subject"
-          className="rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+          className="rounded-lg text-white border-white/20 bg-black/5 backdrop-blur-xl focus:border-white/30 transition-colors"
         />
         <Textarea
           name="message"
           required
           placeholder="Your message"
-          className="min-h-[150px] rounded-lg text-white border-white/20 bg-white/5 backdrop-blur-xl focus:border-white/30 transition-colors"
+          className="min-h-[150px] rounded-lg text-white border-white/20 bg-black/5 backdrop-blur-xl focus:border-white/30 transition-colors"
         />
         <Button
           type="submit"
