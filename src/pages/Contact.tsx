@@ -4,7 +4,7 @@ import { AppointmentSection } from "@/components/AppointmentSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { motion } from "framer-motion";
-import { Separator } from "./ui/separator";
+import { Separator } from "@/components/ui/separator";
 
 const Contact = () => {
   return (
